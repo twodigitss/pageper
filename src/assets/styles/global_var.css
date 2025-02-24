@@ -1,0 +1,43 @@
+:root{
+  /*Colors for col.schemes icon fills*/
+  --diamond: #cfe4ef;
+  --day: #ffffcc;
+  --night: #afc0d6;
+  --gruv: #83a598;
+  --rose: #d7827e;
+
+  /*literal fallback values*/
+  --body: none;
+  --bg_0: #fefefe;
+  --bg_1: #f5f5f5;
+  --text: #303030;
+  --sep:  #dedede;
+  --text_hover: var(--night);
+}
+
+:root :has(#dark:checked){
+  --body: #191919;
+  --bg_0: #262626;
+  --bg_1: #1f1f1f;
+  --text: #ececec;
+  --sep:  #2a2a2a;
+  --text_hover: var(--day);
+}
+
+:root :has(#gruvbox:checked){
+  --body: #282828;
+  --bg_0: #1d2021;
+  --bg_1: #3c3836;
+  --text: #fbf1c7;
+  --sep:  #665c54;
+  --text_hover: var(--gruv);
+}
+
+:root :has(#rosepine:checked){
+  --body: #faf4ed;
+  --bg_0: #fffaf3;
+  --bg_1: #f2e9e1;
+  --text: #575279;
+  --sep:  #797592;
+  --text_hover: var(--rose);
+}

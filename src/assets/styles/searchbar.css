@@ -1,0 +1,52 @@
+@import "global_var.css";
+
+.that_search_bar{
+  all: unset;
+  display: flex;
+  background-color: var(--bg_1);
+  border-radius: 2.5rem;
+  margin: 2rem;
+  font-size: 1.7rem;
+  form{
+    padding: 1rem;
+
+  }
+}
+.select_engine{
+  all: unset;
+  /* border-radius: var(--rb); */
+  /* padding: var(--pad-l);  */
+  background-color: inherit;
+  color: var(--text);
+  margin: 0rem 0.8rem 0rem 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+.option_engine{
+  all: unset;
+  background-color: inherit;
+  text-align: center;
+
+}
+.search_input{
+  all: unset;
+  background-color: inherit;
+  color: var(--text);
+  margin: 0rem 0.8rem 0rem 0.8rem;
+  font-size: 1.6rem;
+}
+.btn_subm{
+  all: unset;
+  background-color: inherit;
+  color: var(--text);
+  margin: 0rem 0.8rem 0rem 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  /* padding: var(--pad-r);  */
+}
+#separator{
+  content:'';
+  border-right: 0.3rem solid var(--sep);
+}

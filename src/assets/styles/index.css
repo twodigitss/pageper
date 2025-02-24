@@ -1,0 +1,193 @@
+@import "global_var.css";
+
+html{
+  font-size: 62.5%;
+}
+p{ 
+  all:unset; 
+  color: var(--text);  
+}
+a{
+  color: #121212;
+  text-decoration: none;
+}
+a:hover{
+  cursor: pointer;
+  color: var(--light_text_hover);
+}
+
+body{
+  display: grid;
+  place-items: center;
+  width: 100dvw; height: 100dvh;
+  margin:0;
+  background-color: var(--body);
+
+  font-family: "Inter", serif;
+  font-size: 2rem;
+}
+
+#upper_section{
+  display: grid;
+  place-items:center;
+}
+
+#middle_section{
+  display:flex;
+  min-height: 30rem;
+  height: content-fit;
+  margin: 2rem;
+}
+
+.main_frame{
+  display:grid;
+  place-items:center;
+
+  gap: 4rem;
+
+  #profile_picture{
+    --size: 5.5rem;
+    border-radius:50%;
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+#users_name{
+  color: var(--text_hover);
+}
+#gif{
+  width: 30rem;
+  height: 0 auto;
+  border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.the_date_and_time{
+  display:grid;
+  place-items:center;
+
+}
+
+.main_header{
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  /*good alternative to the default layout*/
+  /* display: grid; */
+  /* grid-auto-flow: row; */
+  /* place-items:center; */
+  padding: 1rem;
+  gap: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .main_header{
+    display: grid;
+    grid-auto-flow: row;
+    place-items:center;
+  }
+  #bookmark_container_hasimg {
+    border-radius: 0rem 0rem 1rem 1rem !important;
+  }
+  #bookmark_container_notimg{
+    border-radius: 1rem 1rem 1rem 1rem;
+  }
+  #middle_section{
+    display: grid;
+  }
+  #gif{
+    width: 100%;
+    height: 20rem;
+    border-radius: 1rem 1rem 0rem 0rem !important;
+  }
+
+}
+
+#welcoming{
+  place-items: center;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.bookmarks_container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  height: content-fit;
+  max-width: 70rem;
+
+  background-color: var(--bg_1); 
+  padding: 0rem 2rem 0rem 2rem;
+  
+  .bookmarks_title{
+    font: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bookmarks_each{
+    display: flex;
+    flex-direction: column;
+    
+    margin: 1rem;
+    padding: 1rem;
+    
+    /* text-align: center; */
+    font-weight: normal;
+  }
+  .bookmarks_links{
+    font-style: normal;
+    font-size: 1.7rem;
+  }
+  .bookmarks_links :hover{
+    color: var(--text_hover);
+  }
+}
+#bookmark_container_hasimg{
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+#bookmark_container_notimg{
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+#main_clock{
+  font-size: 7rem; 
+  font-weight: bold;
+}
+#main_date{
+  font-weight: bold;
+
+}
+
+.colorscheme_form{
+  display: flex;
+  background-color: var(--bg_1);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+input[type="radio"]{
+  appearance: none;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+input[type="radio"]:checked{
+  border: 1px solid var(--text);
+}
+input[type="radio"]#dark{
+  background-color: var(--night);
+}
+input[type="radio"]#light{
+  background-color: var(--day);
+}
+input[type="radio"]#gruvbox{
+  background-color: var(--gruv);
+}
+input[type="radio"]#rosepine{
+  background-color: var(--rose);
+}

@@ -1,0 +1,37 @@
+{
+  "username": "Default",
+  "profile_pic": "./images/user.png",
+  "profile_gif": "./images/bg.png",
+  "bookmarks" : {
+    "Social":{
+      "YouTube": "https://www.youtube.com/",
+      "Reddit": "https://www.reddit.com/",
+      "Instagram": "https://www.instagram.com/",
+      "Twitter": "https://x.com/",
+      "Facebook": "https://www.facebook.com/"
+    },
+    "Cloud":{
+      "Gmail": "https://mail.google.com/",
+      "Drive": "https://drive.google.com/",
+      "Docs": "https://docs.google.com/document/u/0/",
+      "Sheets": "https://docs.google.com/spreadsheets/create?hl=en",
+      "Translate": "https://translate.google.com/"
+    },
+    "Games":{
+      "Steam": "https://store.steampowered.com/",
+      "Rockstar": "https://www.rockstargames.com/",
+      "Epic": "https://www.epicgames.com/site/en-US/home",
+      "Ubisoft": "https://www.ubisoft.com/en-us/",
+      "Eneba": "https://www.eneba.com/"
+    },
+    "Chats":{
+      "Chatgpt": "https://www.chatgpt.com/",
+      "Gemini": "https://gemini.google.com/app",
+      "Claude": "https://claude.ai",
+      "Blackbox": "https://www.blackbox.ai/",
+      "Deepseek": "https://chat.deepseek.com"
+    }
+
+  }
+
+}
