@@ -1,4 +1,5 @@
-import user_pref from '../../../template.json';
+// import user_pref from '@user_conf';
+import user_pref from "@utils/get_preferences";
 
 const Bookmarks = (props) => {
   return (
@@ -13,7 +14,7 @@ const Bookmarks = (props) => {
 
             {Object.entries(links).map(([name, url]) => (
               //&bull; 
-              <a className='bookmarks_links' href={url} key={name}> 
+              <a className='bookmarks_links' href={url} key={name}>
                    <p> {name} </p>
               </a> 
             ))}

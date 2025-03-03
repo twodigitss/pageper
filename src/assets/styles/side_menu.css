@@ -1,0 +1,59 @@
+@import "global_var.css";
+
+.side_menu_configs{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+  gap: 1rem;
+  padding: 2rem;
+
+  position: fixed;
+  top: 0;
+  right: 4rem; 
+
+  background-color: var(--bg_1);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.side_menu_button{
+  all: unset;
+  /* background-color: var(--bg_1); */
+}
+
+.colorscheme_form{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 90%; 
+
+  background-color: var(--bg_0);
+  padding: 1rem;
+  border-radius: 1rem ;
+  /* width: fit-content;  */
+}
+
+.upload_conf_button{
+  all: unset;
+
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 90%; 
+
+  background-color: var(--bg_0) ;
+  color: var(--text);
+  font-size: 1.5rem;
+
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.load_config_container{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100%; 
+
+}

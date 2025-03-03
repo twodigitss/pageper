@@ -24,9 +24,12 @@ const MinimalSearchBar = () => {
       <span id='separator'></span>  
 
       {/* value={searchTerm} */}
-      <input className='search_input' type="text" placeholder="Search..." onChange={e => setSearchTerm(e.target.value)}/>
-      
-      <button className='btn_subm' type="submit">Q</button>
+      <input className='search_input' autoFocus type="text" 
+        placeholder="Search..." onChange={e => setSearchTerm(e.target.value)}/>
+    
+      <button className='btn_subm' type="submit">
+        <span className="material-symbols-outlined"> search </span>
+      </button>
 
     </form>
   </div>

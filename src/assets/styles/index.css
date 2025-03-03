@@ -1,5 +1,9 @@
 @import "global_var.css";
 
+.material-symbols-outlined{
+  color: var(--text);
+}
+
 html{
   font-size: 62.5%;
 }
@@ -35,7 +39,8 @@ body{
 #middle_section{
   display:flex;
   min-height: 30rem;
-  height: content-fit;
+  /* height: fit-content; */
+  /* height: content-fit; */
   margin: 2rem;
 }
 
@@ -43,7 +48,7 @@ body{
   display:grid;
   place-items:center;
 
-  gap: 4rem;
+  gap: 3rem;
 
   #profile_picture{
     --size: 5.5rem;
@@ -81,7 +86,7 @@ body{
   text-align: center;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 700px) {
   .main_header{
     display: grid;
     grid-auto-flow: row;
@@ -116,7 +121,9 @@ body{
   flex-direction: row;
   justify-content: space-evenly;
 
-  height: content-fit;
+  /*why...?*/
+  /* height: content-fit; */
+  height: auto;
   max-width: 70rem;
 
   background-color: var(--bg_1); 
@@ -136,7 +143,7 @@ body{
     margin: 1rem;
     padding: 1rem;
     
-    /* text-align: center; */
+    text-align: center;
     font-weight: normal;
   }
   .bookmarks_links{
@@ -163,12 +170,6 @@ body{
 
 }
 
-.colorscheme_form{
-  display: flex;
-  background-color: var(--bg_1);
-  padding: 1rem;
-  border-radius: 2rem;
-}
 input[type="radio"]{
   appearance: none;
   cursor: pointer;
@@ -191,3 +192,5 @@ input[type="radio"]#gruvbox{
 input[type="radio"]#rosepine{
   background-color: var(--rose);
 }
+
+

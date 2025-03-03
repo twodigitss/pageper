@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
-import '../assets/styles/index.css';
-import user_pref from '../../template.json';
-import Bookmarks from "../components/containers/bookmarks";
-import MinimalSearchBar from "../components/elements/search_bar";
-import Theme_switcher from "../components/elements/theme_picker";
-import Side_Menu from "./side_menu";
-import CurrentDate, {CurrentTime} from "../components/elements/clock";
+import '@styles/index.css';
+
+import user_pref from '@user_conf';
+
+//ALL COMPONENT IMPORTS
+import Bookmarks from "@containers/bookmarks";
+import MinimalSearchBar from "@components/search_bar";
+import CurrentDate, {CurrentTime} from "@components/clock";
 
 function truncateText(text, maxLength) {
   if (text.length > maxLength) {
@@ -17,7 +18,7 @@ function truncateText(text, maxLength) {
 const Main = () => {
   const username = user_pref.username 
   const username_cropped = truncateText(username, 20);
-  
+
   return(
     <div className="main_frame">
 
@@ -34,6 +35,7 @@ const Main = () => {
           }
           { !user_pref.profile_pic ?
             <Fragment/> :
+            //NOTE: THIS IMAGE WILL BE REPLACED BY LOCALSTORAGE OR A PICKER
             <img id='profile_picture' src={user_pref.profile_pic}/> 
           }
         </div>
@@ -57,8 +59,7 @@ const Main = () => {
         } 
       </div>
 
-      {/* <Theme_switcher/> */}
-      {/* <Side_Menu/> */}
+      {/*get this two to a sidebar menu or whatever*/}
 
     </div>
   )

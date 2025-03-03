@@ -8,7 +8,9 @@
   margin: 2rem;
   font-size: 1.7rem;
   form{
-    padding: 1rem;
+    display: flex;
+    place-items: center;
+    padding: 0.4rem;
 
   }
 }
@@ -41,12 +43,14 @@
   all: unset;
   background-color: inherit;
   color: var(--text);
-  margin: 0rem 0.8rem 0rem 0.8rem;
+  margin: 0.2rem 1rem 0rem 1rem;
   cursor: pointer;
   text-align: center;
   /* padding: var(--pad-r);  */
 }
 #separator{
   content:'';
+  height: 80%;
   border-right: 0.3rem solid var(--sep);
 }
+
