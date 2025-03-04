@@ -41,7 +41,7 @@ const Load_local_configs = () => {
       <button onClick={load_file_to_localstorage} className='upload_conf_button'> 
         {/*no funciona con doble link*/}
         <span className="material-symbols-outlined"> upload </span>
-        Upload Config.
+        <p>Settings</p>
       </button>
 
     </div>

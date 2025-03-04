@@ -3,18 +3,22 @@ import '../../assets/styles/searchbar.css'
 
 const MinimalSearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchEngine, setSearchEngine] = useState('https://www.google.com/search');
+  const [searchEngine, setSearchEngine] = useState(
+    localStorage.getItem('pageper_search_engine')||'https://www.google.com/search');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.href =`${searchEngine}?q=${encodeURIComponent(searchTerm)}`, '_blank';
-  };
+    window.location.href =`${searchEngine}?q=${encodeURIComponent(searchTerm)}`, '_blank';};
+
+  const handle_search_engine = (e) => {
+    setSearchEngine(e.target.value)
+    localStorage.setItem('pageper_search_engine', e.target.value)}
 
   return (
   <div className='that_search_bar'>
     <form onSubmit={handleSubmit} >
       
-      <select className='select_engine' value={searchEngine} onChange={e => setSearchEngine(e.target.value)}>
+      <select className='select_engine' value={searchEngine} onChange={handle_search_engine}>
         <option className='option_engine' value="https://www.google.com/search">Google</option>
         <option className='option_engine' value="https://www.bing.com/search">Bing</option>
         <option className='option_engine' value="https://search.yahoo.com/search">Yahoo</option>

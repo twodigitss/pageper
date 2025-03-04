@@ -12,8 +12,6 @@ style="border: 3px solid black;">
 
 ## <strong>How to install 💻</strong>
 
-<br>
-
 > ### 🧩 Through Firefox Extensions. <br>
 Is on the works (:
 <br><br>

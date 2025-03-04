@@ -1,16 +1,18 @@
 VERSION 1.0
 - [x] Crear un boton de temas
-- [-] crear un menu que guarde configuraciones en local con localStorage
+- [x] hacer que el boton de menu sea despleglable
+- [ ] cambiar la imagen promocional
+- [ ] remover algunas cosas como mi config, la foto de perfil y mas con gitignore
 
+- [-] crear un menu que guarde configuraciones en local con localStorage
 > - [x] username
 > - [x] bookmarks
 > - [x] colorscheme
-> - [ ] engine
+> - [x] engine
 > - [ ] imagen
 > - [ ] gif
 > - [ ] color de acento por tema
 
-- [ ] hacer que el boton de menu sea despleglable
 
 VERSION 3.0
 - [ ] open wheather api para mostrar clima
