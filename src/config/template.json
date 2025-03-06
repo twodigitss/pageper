@@ -1,7 +1,5 @@
 {
   "username": "Default",
-  "profile_pic": "./images/user.png",
-  "profile_gif": "./images/bg.png",
   "bookmarks" : {
     "Social":{
       "YouTube": "https://www.youtube.com/",

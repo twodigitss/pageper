@@ -1,9 +1,11 @@
 import React from "react";
 import '@styles/side_menu.css'
 import { useState } from "react";
+import { Settings2 } from 'lucide-react';
 
 import Theme_switcher from "@components/theme_picker";
 import Load_local_configs from "@utils/load_preferences";
+import {Load_profile_picture} from "@utils/load_preferences";
 
 const Side_Menu = () => {
   const [isUp, setIsUp] = useState(true);
@@ -13,7 +15,7 @@ const Side_Menu = () => {
   };
 
   const css = {
-    transform: isUp ? 'translateY(-11.8rem)' : 'translateY(0)'
+    transform: isUp ? 'translateY(-19.5rem)' : 'translateY(0)'
   }
 
   return (
@@ -22,8 +24,12 @@ const Side_Menu = () => {
       <Theme_switcher/>
       <Load_local_configs/>
 
+      {/*TODO: figure out why the parameter always take them as true*/}
+      <Load_profile_picture is_pfp={true} label={"Profile"}/>
+      <Load_profile_picture is_pfp={false} label={"Banner"}/>
+
       <button className="side_menu_button" onClick={togglePosition}>
-        <span className="material-symbols-outlined"> settings </span>
+        <Settings2 size={20} id="setting"/>
       </button>
 
     </div>

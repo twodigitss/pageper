@@ -1,6 +1,7 @@
 :root{
   /*Colors for col.schemes icon fills*/
-  font-family: "Inter", serif;
+  font-family: "Inter", "Roboto", serif;
+  font-size: 62.5%;
 
   --diamond: #cfe4ef;
   --day: #ffffcc;

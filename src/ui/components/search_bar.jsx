@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../assets/styles/searchbar.css'
+import { Search } from 'lucide-react';
 
 const MinimalSearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -32,7 +33,9 @@ const MinimalSearchBar = () => {
         placeholder="Search..." onChange={e => setSearchTerm(e.target.value)}/>
     
       <button className='btn_subm' type="submit">
-        <span className="material-symbols-outlined"> search </span>
+        
+        {/** <span className="material-symbols-outlined"> search </span> */}
+        <Search size={20}/>
       </button>
 
     </form>

@@ -13,19 +13,22 @@ const Theme_switcher = () => {
 
 
   return (
-    <form className="colorscheme_form">
-      <input type="radio" name='theme' id="light"     
-        onChange={save_handler} defaultChecked={saved_theme==='light'}/>
+    <div className="colorscheme_form">
+      <form >
+        <input type="radio" name='theme' id="light"     
+          onChange={save_handler} defaultChecked={saved_theme==='light'}/>
 
-      <input type="radio" name='theme' id="dark"      
-        onChange={save_handler} defaultChecked={saved_theme==='dark'}/>
+        <input type="radio" name='theme' id="dark"      
+          onChange={save_handler} defaultChecked={saved_theme==='dark'}/>
 
-      <input type="radio" name='theme' id="rosepine"  
-        onChange={save_handler} defaultChecked={saved_theme==="rosepine"}/>
+        <input type="radio" name='theme' id="rosepine"  
+          onChange={save_handler} defaultChecked={saved_theme==="rosepine"}/>
 
-      <input type="radio" name='theme' id="gruvbox"   
-        onChange={save_handler} defaultChecked={saved_theme==='gruvbox'}/>
-    </form>
+        <input type="radio" name='theme' id="gruvbox"   
+          onChange={save_handler} defaultChecked={saved_theme==='gruvbox'}/>
+      </form>
+
+    </div>
   )
 }
 
