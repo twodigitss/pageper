@@ -1,32 +1,31 @@
 import React, { Fragment, useEffect, useState } from "react";
 import '@styles/index.css';
 
-import user_pref from '@user_conf';
+//i had the idea of replace this line instead the actual (idk what i was thinking)
+//config uloaded with this because if it runs for first time 
+//it gives an error because no user_pref is generated properly
+//before the page loads itself. my apologies
+import user_pref from "@utils/get_preferences";
 
 //ALL COMPONENT IMPORTS
 import Bookmarks from "@containers/bookmarks";
 import MinimalSearchBar from "@components/search_bar";
 import CurrentDate, {CurrentTime} from "@components/clock";
+import useLocalS from "@hooks/useLocalSt";
 
 function truncateText(text, maxLength) {
-  if (text.length > maxLength) {
-    return text.substring(0, maxLength) + '...';
-  }
+  if (text.length > maxLength) return text.substring(0, maxLength) + '...';
   return text;
 }
 
 const Main = () => {
+  //custom hooks to update images
+  //takes a key and a default value
+  const profile_pic = useLocalS('pageper_profile_img', './images/user.png');
+  const banner_pic = useLocalS('pageper_banner_img', './images/bg.png');
+
   const username = user_pref.username 
   const username_cropped = truncateText(username, 20);
-  const [profile_pic, setProfilePic] = useState("./images/user.png");
-  const [banner_pic, setBannerPic] = useState("./images/bg.png");
-
-  useEffect(()=>{
-    const loaded_image = localStorage.getItem('pageper_profile_img');
-    const loaded_banner = localStorage.getItem('pageper_banner_img');
-    if (loaded_image) setProfilePic(loaded_image);
-    if (loaded_banner) setBannerPic(loaded_banner);
-  },[])
 
   return(
     <div className="main_frame">

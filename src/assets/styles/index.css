@@ -4,9 +4,6 @@
   color: var(--text);
 }
 
-html{
-  font-size: 62.5%;
-}
 p{ 
   all:unset; 
   color: var(--text);  
@@ -34,6 +31,18 @@ body{
 #upper_section{
   display: grid;
   place-items:center;
+  #main_clock{
+    font-size: 7rem; 
+    font-weight: bold;
+  }
+  #main_date{
+    font-weight: bold;
+  }
+  .the_date_and_time{
+    display:grid;
+    place-items:center;
+  }
+
 }
 
 #middle_section{
@@ -65,12 +74,6 @@ body{
   width: 30rem;
   height: 0 auto;
   border-radius: 1rem 0rem 0rem 1rem;
-}
-
-.the_date_and_time{
-  display:grid;
-  place-items:center;
-
 }
 
 .main_header{
@@ -164,14 +167,6 @@ body{
   border-radius: 1rem 1rem 1rem 1rem;
 }
 
-#main_clock{
-  font-size: 7rem; 
-  font-weight: bold;
-}
-#main_date{
-  font-weight: bold;
-
-}
 
 input[type="radio"]{
   appearance: none;

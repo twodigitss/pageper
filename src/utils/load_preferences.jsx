@@ -2,48 +2,6 @@ import { useRef, useState, useEffect } from 'react';
 import { ImageUp, FileUp } from 'lucide-react';
 import '@styles/side_menu.css'
 
-//load pictures to localstorage
-// const Load_profile_picture = ({is_pfp}) => {
-//   const set_img_to_ls = is_pfp ? 'pageper_profile_img' : 'pageper_banner_img';
-
-//   const handleImageSelect = (event) => {
-//     const fileInput = document.getElementById('profileImageInput');
-//     if (fileInput) fileInput.click();
-//     const file = event.target.files[0];
-
-//     if (file) {
-//       const reader = new FileReader();
-//       reader.onload = (e) => {
-//         const base64Image = e.target.result;
-//         localStorage.setItem(set_img_to_ls, base64Image);
-//       };
-      
-//       reader.readAsDataURL(file);
-//     }
-//   };
-
-//   // Trigger file input when "Upload" button is clicked
-//   const triggerFileInput = () => {
-//     const fileInput = document.getElementById('profileImageInput');
-//     if (fileInput) fileInput.click();
-//   };
-
-//   return (
-//     <div className="">
-//       <input 
-//         type="file" 
-//         id="profileImageInput"
-//         accept="image/*"
-//         // hidden
-//         // className="hidden"
-//         onChange={handleImageSelect}
-//       />
-      
-//     {/*<button onClick={handleImageSelect}> Upload Image </button>*/}
-//     </div>
-//   );
-// }
-
 const Load_profile_picture = ({is_pfp, label}) => {
   const fileInputRef = useRef(null);
   const set_img_to_ls = is_pfp ? 'pageper_profile_img' : 'pageper_banner_img';
@@ -126,8 +84,6 @@ const Load_local_configs = () => {
     </div>
   )
 }
-
-
 
 export default Load_local_configs;
 export {Load_profile_picture};

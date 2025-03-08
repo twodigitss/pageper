@@ -19,6 +19,7 @@ export default defineConfig({
       '@containers': '/src/ui/containers',
       '@pages': '/src/ui/pages',
       '@utils': '/src/utils',
+      '@hooks': '/src/hooks',
 
       //configurations
       '@user_conf': '/src/utils/get_preferences',

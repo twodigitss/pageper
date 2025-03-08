@@ -22,4 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-src/config/user_conf.json
+./src/config/user_conf.json
+./TODO.md

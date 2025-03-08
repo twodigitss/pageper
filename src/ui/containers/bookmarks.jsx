@@ -1,7 +1,12 @@
 // import user_pref from '@user_conf';
+// import user_prefs from "@utils/get_preferences";
+// import template from "@template";
 import user_pref from "@utils/get_preferences";
 
 const Bookmarks = (props) => {
+  // if user_pref is empty use template
+  // const user_pref = user_prefs ? user_prefs : template;
+
   return (
     <div className={"bookmarks_container"} id={props.has_img}>
       {Object.entries(user_pref.bookmarks).map(([category, links]) => (
