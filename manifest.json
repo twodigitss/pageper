@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Pageper",
+  "version": "1.0",
+  "description": "Simplistic and customizable startpage for your browser",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
+

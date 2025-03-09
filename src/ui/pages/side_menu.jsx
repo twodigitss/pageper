@@ -24,7 +24,6 @@ const Side_Menu = () => {
       <Theme_switcher/>
       <Load_local_configs/>
 
-      {/*TODO: figure out why the parameter always take them as true*/}
       <Load_profile_picture is_pfp={true} label={"Profile"}/>
       <Load_profile_picture is_pfp={false} label={"Banner"}/>
 
