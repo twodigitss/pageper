@@ -21,13 +21,13 @@ This project has been tested and is supported on the following platforms:
 
 - **Node.js:** Version 22.8.0 or higher (LTS recommended)
 - **npm:** (Comes bundled with Node.js; ensure version 9 or higher)
-- **Git:** Version 2.30 or higher is recommended
-- **tar Utility:** Required for packaging the extension (typically available by default on Linux and macOS; for Windows, use Git Bash or install a compatible tar tool)
+- **git:** Version 2.30 or higher is recommended
+- **zip Utility:** Required for packaging the extension. Version 3.0 or higher
 
 ### Additional Notes
 
 - Firefox Extension Testing: Use the latest version of Mozilla Firefox for loading and testing your extension.
-- Ensure that your environment’s PATH variable includes the necessary executables for Node.js, npm, Git, and tar.
+- Ensure that your environment’s PATH variable includes the necessary executables for Node.js, npm, git, and zip.
 <br> 
 
 # <strong> Building</strong>
