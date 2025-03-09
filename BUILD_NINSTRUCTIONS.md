@@ -1,22 +1,15 @@
-# Build Instructions for Pageper Startpage
+# <strong>Build Instructions for Pageper Startpage</strong>
 
 This document provides step-by-step instructions to build the Pageper Firefox extension from source.
 
-## Prerequisites
-
-Ensure you have the following installed on your system:
-
-* git (v2.46.0)
-* tar (GNU tar, v1.35) 
-* Node.js (v22.8.0)
-* npm (v10.8.2) (comes installed with Node.js)
+# <strong>Prerequisites</strong>
 
 <!--
 Note: This project has been tested on Linux only.
 While it is expected to work on macOS and Windows (using Git Bash or WSL), these platforms have not been verified yet.
 -->
 
-## Operating System and Build Environment Requirements
+### Operating System and Build Environment Requirements
 
 This project has been tested and is supported on the following platforms:
 
@@ -35,6 +28,9 @@ This project has been tested and is supported on the following platforms:
 
 - Firefox Extension Testing: Use the latest version of Mozilla Firefox for loading and testing your extension.
 - Ensure that your environment’s PATH variable includes the necessary executables for Node.js, npm, Git, and tar.
+<br> 
+
+# <strong> Building</strong>
 
 ## Clone the Repository
 ```bash
@@ -75,16 +71,3 @@ Before submitting, you can test the extension in Firefox Developer Edition:
 3. Click Load Temporary Add-on.
 
 4. Select the manifest.json file inside the dist/ folder.
-
-# Submission to Mozilla Add-ons (AMO)
-
-1. Navigate to Firefox Add-ons Developer Hub.
-
-2. Click Submit a New Add-on.
-
-3. Choose On Your Own and upload pageper_firefox.zip.
-
-4. Provide the required details and submit for review.
-
-5. For any issues, refer to the repository documentation or contact the maintainer.
-

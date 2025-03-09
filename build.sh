@@ -1,4 +1,4 @@
-#!/usr/bin/env :bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -15,7 +15,12 @@ npm install
 # Build the extension
 npm run build
 
-# Package the extension (creates a tar.gz archive from the dist folder)
-tar -czvf pageper_firefox.zip -C dist .
+cp manifest.json ./dist
 
-echo "Build and packaging complete: pageper_firefox.zip"
+# Go into production files
+cd dist
+
+# Package the extension (creates a tar.gz archive from the dist folder)
+zip -r pageper_firefox.zip *
+
+echo "Build and packaging complete at: pageper/dist/pageper_firefox.zip"

@@ -4,7 +4,11 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './', // Ensure relative paths include './'
   plugins: [react()],
+  build: {
+    assetsDir: './assets'
+  },
   resolve: {
       alias: {
       // "@": path.resolve(__dirname, "./src/*"),
