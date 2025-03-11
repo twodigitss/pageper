@@ -3,7 +3,7 @@
 .that_search_bar{
   all: unset;
   display: flex;
-  background-color: var(--bg_1);
+  background-color: var(--bg_0);
   border-radius: 2.5rem;
   margin: 2rem;
   font-size: 1.7rem;
@@ -20,7 +20,7 @@
   /* padding: var(--pad-l);  */
   background-color: inherit;
   color: var(--text);
-  margin: 0rem 0.8rem 0rem 0.8rem;
+  margin: 0rem 1rem 0rem 1rem;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
@@ -36,7 +36,7 @@
   all: unset;
   background-color: inherit;
   color: var(--text);
-  margin: 0rem 0.8rem 0rem 0.8rem;
+  margin: 0rem 1rem 0rem 1rem;
   font-size: 1.6rem;
 }
 .btn_subm{
@@ -51,6 +51,7 @@
 #separator{
   content:'';
   height: 80%;
-  border-right: 0.3rem solid var(--sep);
+  width: 0.1rem;
+  border-left: 0.1rem solid var(--sep);
 }
 

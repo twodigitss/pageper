@@ -22,11 +22,10 @@ This project has been tested and is supported on the following platforms:
 - **Node.js:** Version 22.8.0 or higher (LTS recommended)
 - **npm:** (Comes bundled with Node.js; ensure version 9 or higher)
 - **git:** Version 2.30 or higher is recommended
-- **zip Utility:** Required for packaging the extension. Version 3.0 or higher
+- **zip:** Required for packaging the extension. Version 3.0 or higher
 
 ### Additional Notes
 
-- Firefox Extension Testing: Use the latest version of Mozilla Firefox for loading and testing your extension.
 - Ensure that your environment’s PATH variable includes the necessary executables for Node.js, npm, git, and zip.
 <br> 
 
@@ -51,14 +50,24 @@ To create a production-ready build, run:
 ```bash
 npm run build
 ```
+
+>Note: You can run the project with `npm run build` for a local development.
+
+<br>
+
 This will generate the necessary files in the `dist/` directory.
+
+```bash
+cd dist
+```
 
 ## Package the Extension
 
 To package the extension for Firefox, you need to create a .zip file of the dist/ directory. Run:
 ```bash
-tar -czvf pageper_firefox.zip -C dist .
+zip -r pageper_firefox.zip *
 ```
+
 
 ## Verify the Extension
 
@@ -71,3 +80,18 @@ Before submitting, you can test the extension in Firefox Developer Edition:
 3. Click Load Temporary Add-on.
 
 4. Select the manifest.json file inside the dist/ folder.
+
+
+## Extra notes
+> If you want to open the index.html file directly as a static page in firefox, you cannot access directly to files on firefox. For such, set the next options with its corresponding value in `about:config`. 
+
+>Extra note: the only important property is the first, i did include the other third when i was searching how to open local files in firefox. try with the first property first, and if it doesn't work, enable the rest. but i am sure with the first is enough.
+
+<br>
+
+| Property                             | value  |
+|--------------------------------------|--------|
+|security.fileuri.strict_origin_policy | false  |
+|browser.search.openintab              | true   |
+|browser.urlbar.openintab              | true   |
+|browser.tabs.loadBookmarksInTabs      | true   |

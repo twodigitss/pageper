@@ -26,7 +26,7 @@ const MinimalSearchBar = () => {
         <option className='option_engine' value="https://duckduckgo.com/">DuckGo</option>
       </select>
       
-      <span id='separator'></span>  
+      <span id='separator'> </span>  
 
       {/* value={searchTerm} */}
       <input className='search_input' autoFocus type="text" 

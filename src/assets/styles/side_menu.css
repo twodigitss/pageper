@@ -3,7 +3,13 @@
 #Banner{
   margin-bottom: 1rem;
 }
-
+#side_menu_separator{
+  content:'';
+  width: 100%;
+  height: 0.1rem;
+  margin-bottom: 1rem;
+  background-color: var(--sep);
+}
 .side_menu_configs{
   display: flex;
   flex-direction: column;
@@ -17,30 +23,9 @@
   top: 0rem;
   right: 0rem; 
 
-  background-color: var(--bg_1);
+  background-color: var(--bg_0);
   border-radius: 0 0 0rem 1rem;
 }
-/* thanks to
- * https://codesandbox.io/p/sandbox/inverted-border-radius-sm8ou?file=%2Fsrc%2Fstyles.scss%3A33%2C5-55%2C6&%E2%80%A6
- * for the inverted border-radius trick <3
- * */
-#the_corner {
-  content: '';
-  background: transparent;
-  height: 2em;
-  width: 2em;
-  
-  /* transform: scale(-1,1); */
-  transform: rotate(90deg);
-  position: absolute;
-  top: -0.1rem;
-  right: 7.86em;
-
-  border-radius: 15px 0 0 0;
-  box-shadow: 0 -16px 0 0 var(--bg_1);
-}
-
-
 
 .side_menu_button{
   all: unset;
@@ -53,7 +38,7 @@
   /* top: 13.5rem; */
   /* right: 4rem; */
 
-  /* background-color: var(--bg_1); */
+  /* background-color: var(--bg_0); */
   /* padding: 2rem 1rem 1rem 1rem; */
   padding: 0.1rem;
   cursor: pointer;
@@ -65,10 +50,9 @@
   justify-content: center;
   place-items: center;
 
-  width: auto; 
+  width: 10rem; 
 
-  /* background-color: var(--bg_0); */
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 0rem 1rem 1rem 1rem;
   border-radius: 1rem ;
 }
 
@@ -81,7 +65,6 @@
 
   /* width: 100%;  */
 
-  /* background-color: var(--bg_0); */
   color: var(--text);
   font-size: 1.5rem;
 
@@ -105,7 +88,9 @@
 
 
 @media (max-width: 600px) {
-  .side_menu_configs, #the_corner{
+  .side_menu_configs, 
+  .corners_common
+  {
     display: none;
   }
 }
@@ -135,4 +120,44 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0rem 1rem 0rem 1rem;
+}
+
+/* thanks to
+ * https://codesandbox.io/p/sandbox/inverted-border-radius-sm8ou?file=%2Fsrc%2Fstyles.scss%3A33%2C5-55%2C6&%E2%80%A6
+ * for the inverted border-radius trick <3
+ * */
+.corners_common{
+  content: '';
+  background: transparent;
+  height: 1.5em;
+  width: 1.5em;
+
+  border-radius: 1.5rem 0 0 0;
+  box-shadow: 0 -1.6rem 0 0 var(--bg_0);
+}
+
+#the_corner1 {
+  /* transform: scale(-1,1); */
+  transform: rotate(90deg);
+  position: absolute;
+  top: -0rem;
+  right: 7.86em;
+
+}
+
+#the_corner2 {
+  /* transform: scale(-1,1); */
+  transform: rotate(270deg);
+  position: absolute;
+  bottom: -0rem;
+  /* bottom: -0.2rem; */
+  left: 4.1rem;
+}
+
+#the_corner3 {
+  transform: scale(-1,1) rotate(180deg);
+  position: absolute;
+  bottom: 4.1rem;
+  left: -0rem;
+  /* left: -0.2rem; */
 }

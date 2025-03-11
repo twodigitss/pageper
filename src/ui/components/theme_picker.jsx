@@ -24,8 +24,21 @@ const Theme_switcher = () => {
         <input type="radio" name='theme' id="rosepine"  
           onChange={save_handler} defaultChecked={saved_theme==="rosepine"}/>
 
+        <input type="radio" name='theme' id="biscuit"   
+          onChange={save_handler} defaultChecked={saved_theme==='biscuit'}/> 
+
+        <input type="radio" name='theme' id="gruvbox_light"   
+          onChange={save_handler} defaultChecked={saved_theme==='gruvbox_light'}/>
+        
         <input type="radio" name='theme' id="gruvbox"   
           onChange={save_handler} defaultChecked={saved_theme==='gruvbox'}/>
+        
+        <input type="radio" name='theme' id="catp_light"
+          onChange={save_handler} defaultChecked={saved_theme==='catp_light'}/>
+
+        <input type="radio" name='theme' id="catp_dark"
+          onChange={save_handler} defaultChecked={saved_theme==='catp_dark'}/>
+          
       </form>
 
     </div>

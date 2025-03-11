@@ -15,15 +15,16 @@ const Side_Menu = () => {
   };
 
   const css = {
-    transform: isUp ? 'translateY(-19.5rem)' : 'translateY(0)'
+    transform: isUp ? 'translateY(-22rem)' : 'translateY(0)'
   }
 
   return (
     <div className="side_menu_configs" style={css}>
 
       <Theme_switcher/>
-      <Load_local_configs/>
+      <span id="side_menu_separator"></span>
 
+      <Load_local_configs/>
       <Load_profile_picture is_pfp={true} label={"Profile"}/>
       <Load_profile_picture is_pfp={false} label={"Banner"}/>
 

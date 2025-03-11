@@ -2,8 +2,8 @@
   /*Colors for col.schemes icon fills*/
   font-family: "Inter", "Roboto", serif;
   /*  before was 62.5% on browsers 14px font size
-   *  my mistake was not noticing i had 14px instead of 16px
-   * */
+   *  my mistake was not noticing i had 14px instead of 16px */
+
   font-size: 52.5%; 
 
   --diamond: #cfe4ef;
@@ -11,11 +11,13 @@
   --night: #afc0d6;
   --gruv: #83a598;
   --rose: #d7827e;
+  --biscuit: #E39C45;
+  --catp_light: #a6d189;
+  --catp_dark: #a6e3a1;
 
   /*literal fallback values*/
   --body: none;
-  --bg_0: #fefefe;
-  --bg_1: #f5f5f5;
+  --bg_0: #f5f5f5;
   --text: #303030;
   --sep:  #dedede;
   --text_hover: var(--night);
@@ -23,8 +25,7 @@
 
 :root :has(#dark:checked){
   --body: #191919;
-  --bg_0: #262626;
-  --bg_1: #1f1f1f;
+  --bg_0: #1f1f1f;
   --text: #ececec;
   --sep:  #2a2a2a;
   --text_hover: var(--diamond);
@@ -32,18 +33,48 @@
 
 :root :has(#gruvbox:checked){
   --body: #282828;
-  --bg_0: #1d2021;
-  --bg_1: #3c3836;
+  --bg_0: #3c3836;
   --text: #fbf1c7;
   --sep:  #665c54;
   --text_hover: var(--gruv);
 }
 
+:root :has(#gruvbox_light:checked){
+  --body: #f9f5d7;
+  --bg_0: #ebdbb2;
+  --text: #282828;
+  --sep:  #d5c4a1;
+  --text_hover: var(--gruv);
+}
+
 :root :has(#rosepine:checked){
   --body: #faf4ed;
-  --bg_0: #fffaf3;
-  --bg_1: #f2e9e1;
+  --bg_0: #f2e9e1;
   --text: #575279;
-  --sep:  #797592;
+  --sep:  #e0def4;
   --text_hover: var(--rose);
+}
+
+:root :has(#biscuit:checked){
+  --body: #181515;
+  --bg_0: #221E1E;
+  --text: #F4E6D2;
+  --sep:  #423939;
+  --text_hover: var(--rose);
+}
+
+:root :has(#catp_light:checked){
+  --body: #dce0e8;
+  --bg_0: #e6e9ef;
+  --text: #4c4f69;
+  --sep:  #ccd0da;
+  --text_hover: var(--catp_light);
+}
+
+:root :has(#catp_dark:checked){
+  --body: #11111b;
+  --bg_0: #181825;
+  --text: #cdd6f4;
+  --sep:  #45475a;
+  --text_hover: var(--catp_dark);
 }

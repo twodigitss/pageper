@@ -132,7 +132,7 @@ body{
   height: auto;
   max-width: 70rem;
 
-  background-color: var(--bg_1); 
+  background-color: var(--bg_0); 
   padding: 0rem 2rem 0rem 2rem;
   
   .bookmarks_title{
@@ -187,24 +187,32 @@ input[type="radio"]#light{
 input[type="radio"]#gruvbox{
   background-color: var(--gruv);
 }
+input[type="radio"]#gruvbox_light{
+  background-color: var(--gruv);
+}
 input[type="radio"]#rosepine{
   background-color: var(--rose);
 }
-
-
-/* input[type="file"] {
-  color: transparent;
+input[type="radio"]#biscuit{
+  background-color: var(--biscuit);
+}
+input[type="radio"]#catp_light{
+  background-color: var(--catp_light);
+}
+input[type="radio"]#catp_dark{
+  background-color: var(--catp_dark);
 }
 
-input[type="file"]::file-selector-button {
+#setting, #help{
   color: var(--text);
-  background: var(--bg_1);
-  border: 1px solid var(--text);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  cursor: pointer;
-} */
+}
+#help{
+  position: absolute;
+  bottom: 0rem;
+  left: -0.1rem;
 
-#setting{
-  color: var(--text);
+  padding: 1rem 1rem 1rem 1rem;
+
+  background-color: var(--bg_0);
+  border-radius: 0rem 1.5rem 0rem 0rem;
 }
