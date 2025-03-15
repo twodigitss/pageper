@@ -125,7 +125,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content:space-between;
 
   /*why...?*/
   /* height: content-fit; */
@@ -133,7 +133,7 @@ body{
   max-width: 70rem;
 
   background-color: var(--bg_0); 
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   
   .bookmarks_title{
     font: inherit;
@@ -160,6 +160,7 @@ body{
     color: var(--text_hover);
   }
 }
+
 #bookmark_container_hasimg{
   border-radius: 0rem 1rem 1rem 0rem;
 }
@@ -213,6 +214,7 @@ input[type="radio"]#catp_dark{
 
   padding: 1rem 1rem 1rem 1rem;
 
+  color: var(--text);
   background-color: var(--bg_0);
   border-radius: 0rem 1.5rem 0rem 0rem;
 }

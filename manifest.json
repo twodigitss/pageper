@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Pageper",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Simplistic and customizable startpage for your browser",
   "browser_action": {
     "default_popup": "index.html"

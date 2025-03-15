@@ -22,7 +22,7 @@ const Main = () => {
   //custom hooks to update images
   //takes a key and a default value
   const profile_pic = useLocalS('pageper_profile_img', './images/user.png');
-  const banner_pic = useLocalS('pageper_banner_img', './images/bg.png');
+  const banner_pic = useLocalS('pageper_banner_img', './images/pageper_promo.jpg');
 
   const username = user_pref.username 
   const username_cropped = truncateText(username, 20);
