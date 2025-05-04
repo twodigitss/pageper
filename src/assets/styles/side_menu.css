@@ -1,5 +1,10 @@
 @import "global_var.css";
 
+
+#enesimo_boton_fondo{
+  margin-bottom: 2rem;
+}
+
 #Banner{
   margin-bottom: 1rem;
 }
@@ -14,7 +19,6 @@
   display: flex;
   flex-direction: column;
   place-items: center;
-  /* width: fit-content; */
 
   /* gap: 1rem; */
   padding: 2rem 2rem 1rem 2rem;
@@ -50,7 +54,7 @@
   justify-content: center;
   place-items: center;
 
-  width: 10rem; 
+  width: 12rem; 
 
   padding: 0rem 1rem 1rem 1rem;
   border-radius: 1rem ;
@@ -141,7 +145,8 @@
   transform: rotate(90deg);
   position: absolute;
   top: -0rem;
-  right: 7.86em;
+  right: 8.95em;
+  /* background: red; */
 
 }
 

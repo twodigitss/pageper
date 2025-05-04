@@ -4,7 +4,7 @@
   /*  before was 62.5% on browsers 14px font size
    *  my mistake was not noticing i had 14px instead of 16px */
 
-  font-size: 52.5%; 
+  font-size: 42.5%; 
 
   --diamond: #cfe4ef;
   --day: #ffffcc;
@@ -28,7 +28,7 @@
   --bg_0: #1f1f1f;
   --text: #ececec;
   --sep:  #2a2a2a;
-  --text_hover: var(--diamond);
+  --text_hover: var(--day);
 }
 
 :root :has(#gruvbox:checked){

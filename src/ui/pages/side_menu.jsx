@@ -15,7 +15,7 @@ const Side_Menu = () => {
   };
 
   const css = {
-    transform: isUp ? 'translateY(-22rem)' : 'translateY(0)'
+    transform: isUp ? 'translateY(-19.8rem)' : 'translateY(0)'
   }
 
   return (
@@ -26,7 +26,7 @@ const Side_Menu = () => {
 
       <Load_local_configs/>
       <Load_profile_picture is_pfp={true} label={"Profile"}/>
-      <Load_profile_picture is_pfp={false} label={"Banner"}/>
+    {/*<Load_profile_picture is_pfp={false} label={"Banner"}/>*/} 
 
       <button className="side_menu_button" onClick={togglePosition}>
         <Settings2 size={20} id="setting"/>

@@ -1,7 +1,7 @@
 {
   "username": "Ludwig",
   "bookmarks" : {
-    "Social.":{
+    "Social":{
       "YouTube": "https://www.youtube.com/",
       "Discord": "https://discord.com/channels/@me",
       "GitHub": "https://www.github.com/",
@@ -9,14 +9,14 @@
       "Netflix": "https://www.netflix.com/",
       "Whatsapp": "https://web.whatsapp.com/"
     },
-    "Univer.":{
+    "University":{
       "Classroom": "https://classroom.google.com/u/1/",
       "G.Docs": "https://docs.google.com/document/u/1/",
       "G.Drive": "https://drive.google.com/drive/u/1/",
       "Canva": "https://www.canva.com/",
       "Udemy": "https://www.udemy.com/"
     },
-    "Tools.":{
+    "Tools":{
       "Gmail": "https://mail.google.com/",
       "Proton": "https://account.proton.me/apps",
       "G.Keep": "https://keep.google.com/",
@@ -24,14 +24,14 @@
       "Ilovepdf": "https://www.ilovepdf.com/",
       "Translate": "https://translate.google.com/"
     },
-    "Misc.":{
+    "Misc":{
       "Mangadex": "https://www.mangadex.org/",
       "Amazon":"https://www.amazon.com.mx/",
       "Spotify": "https://www.spotify.com/",
       "Chess": "https://www.chess.com/",
       "4Chan": "https://www.4chan.org/"
     },
-    "AI.":{
+    "AI":{
       "ClaudeAI": "https://claude.ai",
       "Chatgpt": "https://www.chatgpt.com/",
       "Gemini": "https://gemini.google.com/app",

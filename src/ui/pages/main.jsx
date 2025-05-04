@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import '@styles/index.css';
 
 //i had the idea of replace this line instead the actual (idk what i was thinking)
@@ -31,27 +31,29 @@ const Main = () => {
     <div className="main_frame">
 
       <div id="upper_section">
-        <div className="the_date_and_time">
-          <CurrentTime/>
-          <CurrentDate/>
-        </div>
 
         <div className="main_header">
+          { !profile_pic ?
+            <Fragment/> : <img id='profile_picture' src={profile_pic}/> 
+          }
           { username.length == 0 || username == false ?
               <p id="welcoming">Welcome!</p> :
               <p id="welcoming">Welcome <span id="users_name">{username_cropped}!</span>
               </p>
           }
-          { !profile_pic ?
-            <Fragment/> : <img id='profile_picture' src={profile_pic}/> 
-          }
+        </div>
+
+        <div className="the_date_and_time">
+          <CurrentTime/>
+          <CurrentDate/>
         </div>
          
-        <MinimalSearchBar/>     
+        {/*<MinimalSearchBar/> */} 
       </div>
 
       <div id="middle_section">
-        { banner_pic ? 
+                <Bookmarks has_img="bookmark_container_notimg"/>
+        {/* banner_pic ? 
             //render bookmark here as bookmark_container_hasimg 
             ( <Fragment>
                 <img id='gif' src={banner_pic}></img> 
@@ -60,10 +62,9 @@ const Main = () => {
             )
             : //render bookmark here as bookmark_container_notimg 
             ( <Fragment>
-                <Bookmarks has_img="bookmark_container_notimg"/>
               </Fragment>
             )
-        } 
+        */} 
       </div>
 
     </div>
