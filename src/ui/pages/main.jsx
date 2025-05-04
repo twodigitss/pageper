@@ -52,7 +52,8 @@ const Main = () => {
       </div>
 
       <div id="middle_section">
-                <Bookmarks has_img="bookmark_container_notimg"/>
+        <h2 id="middle_section_title">Bookmarks</h2>
+        <Bookmarks has_img="bookmark_container_notimg"/>
         {/* banner_pic ? 
             //render bookmark here as bookmark_container_hasimg 
             ( <Fragment>

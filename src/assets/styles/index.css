@@ -46,6 +46,13 @@ body{
 
 }
 
+#middle_section_title{
+  all: unset;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text_hover);
+
+}
 #middle_section{
   display: grid;
   place-self: center;
@@ -62,7 +69,7 @@ body{
   width: 0 auto;
   /* place-items:center; */
 
-  padding: 6rem;
+  padding: 7rem;
   gap: 3rem;
 
   #profile_picture{
@@ -149,7 +156,7 @@ body{
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--text_hover);
+    /* color: var(--text_hover); */
   }
   
   .bookmarks_each{
@@ -160,7 +167,7 @@ body{
     padding: 1rem;
     gap: 0.2rem;
     
-    text-align: center;
+    text-align: left;
     font-weight: normal;
   }
   .bookmarks_links{
@@ -177,7 +184,7 @@ body{
 }
 #bookmark_container_notimg{
   /* border-radius: 1rem 1rem 1rem 1rem; */
-  gap: 4rem;
+  gap: 3rem;
 }
 
 
