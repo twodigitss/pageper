@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 import Load_local_configs from "@utils/load_preferences";
 import Theme_switcher from "@components/theme_picker";
 import {Load_profile_picture} from "@utils/load_preferences";
+import JsonEditor from "@components/jsonEditor";
 
 //TODO: manejar con un boton el estado de apertura
 //NOTE: si voy a hacer esto, averiguar como reestablecer la config defalult
@@ -87,6 +88,7 @@ function AppSettings({ isOpen, onClose }){
 
       </form>
 
+      <JsonEditor/>
 
     </dialog>
 
