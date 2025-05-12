@@ -21,7 +21,7 @@
   place-items: center;
 
   /* gap: 1rem; */
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 1.5rem;
 
   position: fixed;
   top: 0rem;
@@ -140,15 +140,15 @@
   box-shadow: 0 -1.6rem 0 0 var(--bg_0);
 }
 
-#the_corner1 {
-  /* transform: scale(-1,1); */
-  transform: rotate(90deg);
-  position: absolute;
-  top: -0rem;
-  right: 8.95em;
-  /* background: red; */
-
-}
+/* #the_corner1 { */
+/*   /* transform: scale(-1,1); */ */
+/*   transform: rotate(90deg); */
+/*   position: absolute; */
+/*   top: -0rem; */
+/*   right: 8.95em; */
+/*   /* background: red; */ */
+/**/
+/* } */
 
 #the_corner2 {
   /* transform: scale(-1,1); */

@@ -31,7 +31,7 @@ const Load_profile_picture = ({is_pfp, label}) => {
         onChange={handleImageSelect}
       />
       <button 
-        id='enesimo_boton_fondo'
+        // id='enesimo_boton_fondo'
         onClick={triggerFileInput}
         className="upload_conf_button"
       >

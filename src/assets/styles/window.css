@@ -1,0 +1,85 @@
+dialog {
+  /* display: grid; */
+
+  padding: 3rem;
+  gap: 1rem;
+
+  background-color: var(--bg_0);
+  color: var(--text);
+  border: 1px solid var(--text_hover);
+  border-radius: 0.0rem;
+
+  /* position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  z-index: 1000;
+
+  max-width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.50);
+}
+
+/* Asegúrate de que cuando el dialog está abierto, nada más se pueda interactuar */
+dialog[open] {
+  display: block;
+}
+
+.modal_title{
+  margin: unset;
+  color: var(--hover);
+}
+
+input[type = color]{
+  all: unset;
+  border: 0px;
+
+  /* border-radius: 50%; */
+  height: 2.5rem;
+  width: 2.5rem;
+
+}
+
+.modal_form {
+  display: grid;
+  gap: 1rem;
+}
+
+#ColorSelectionContainer {
+  display: grid;
+  gap: 1rem;
+}
+
+.span{
+  gap: 1rem;
+  display: flex;
+}
+
+#user{
+  display: flex;
+  gap: 1rem;
+}
+
+.colorscheme_form{
+  padding: 0px !important;
+  width: fit-content !important;
+  justify-content: left !important;
+
+}
+.upload_conf_button{
+  padding: 0px !important;
+}
+
+#username{
+  all:unset;
+  background-color: var(--body);
+  border-radius: 0.5rem;
+
+  padding: 1rem;
+
+}

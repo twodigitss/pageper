@@ -1,32 +1,27 @@
 import React from "react";
 import '@styles/side_menu.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Settings2 } from 'lucide-react';
 
-import Theme_switcher from "@components/theme_picker";
-import Load_local_configs from "@utils/load_preferences";
-import {Load_profile_picture} from "@utils/load_preferences";
-
-const Side_Menu = () => {
-  const [isUp, setIsUp] = useState(true);
+const Side_Menu = ({openModal}) => {
+  const [isUp, setIsUp] = useState(false);
 
   const togglePosition = () => {
     setIsUp(!isUp);
+    console.log(isUp);
+    openModal();
   };
 
   const css = {
-    transform: isUp ? 'translateY(-19.8rem)' : 'translateY(0)'
+    transform: isUp ? 'translateY(-0rem)' : 'translateY(0)'
   }
 
   return (
     <div className="side_menu_configs" style={css}>
 
-      <Theme_switcher/>
-      <span id="side_menu_separator"></span>
-
-      <Load_local_configs/>
+      {/*<Load_local_configs/>
       <Load_profile_picture is_pfp={true} label={"Profile"}/>
-    {/*<Load_profile_picture is_pfp={false} label={"Banner"}/>*/} 
+      {/*<Load_profile_picture is_pfp={false} label={"Banner"}/>*/} 
 
       <button className="side_menu_button" onClick={togglePosition}>
         <Settings2 size={20} id="setting"/>
