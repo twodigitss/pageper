@@ -22,7 +22,15 @@ body{
   /* place-items: center; */
   width: 100dvw; height: 100dvh;
   margin:0;
-  background-color: var(--body);
+
+  /*  la verga esta hace que flashee la pantalla
+   *  si no se le pone que es !importante, siempre sera
+   *  negro y los bg_colors no se aplican.
+   *  
+   *  > debo buscar una solucion a que el body sea primero negro, 
+   *    y cuando termine de cargar, cargue todo de golpe.
+   * */
+  background-color: var(--body) !important;
 
   font-family: "Inter", serif;
   font-size: 2rem;

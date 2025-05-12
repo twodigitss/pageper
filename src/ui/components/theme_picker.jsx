@@ -7,10 +7,12 @@ const Theme_switcher = () => {
   // either if is not found it will take light as default
   // who knows why...
   const saved_theme = localStorage.getItem("pageper_theme") || 'light' ;
-  //
-  // click handler
-  const save_handler = (e) => localStorage.setItem("pageper_theme", e.target.id);
-
+  
+  const save_handler = (e) => {
+    localStorage.setItem('pageper_theme', e.target.id);
+    //guarda atributo en el local storage
+    document.documentElement.setAttribute('data-theme', e.target.id);
+  };
 
   return (
     <div className="colorscheme_form">

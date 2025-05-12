@@ -1,11 +1,15 @@
-:root{
-  /*Colors for col.schemes icon fills*/
+:root {
+  /* Colores base - usa oscuro por defecto para evitar el flash */
+  --body: #191919;
+  --bg_0: #1f1f1f;
+  --text: #ececec;
+  --sep: #2a2a2a;
+  --text_hover: var(--diamond);
+  
+  /* Resto de tus variables */
   font-family: "Inter", "Roboto", serif;
-  /*  before was 62.5% on browsers 14px font size
-   *  my mistake was not noticing i had 14px instead of 16px */
-
-  font-size: 42.5%; 
-
+  font-size: 42.5%;
+  
   --diamond: #cfe4ef;
   --day: #ffffcc;
   --night: #afc0d6;
@@ -14,67 +18,69 @@
   --biscuit: #E39C45;
   --catp_light: #a6d189;
   --catp_dark: #f4b8e4;
+}
 
-  /*literal fallback values*/
+/* Tema claro (solo se aplica si explícitamente se selecciona) */
+[data-theme="light"] {
   --body: #ffffff;
   --bg_0: #f5f5f5;
   --text: #303030;
-  --sep:  #dedede;
+  --sep: #dedede;
   --text_hover: var(--night);
 }
 
-:root :has(#dark:checked){
+[data-theme="dark"] {
   --body: #191919;
   --bg_0: #1f1f1f;
   --text: #ececec;
-  --sep:  #2a2a2a;
+  --sep: #2a2a2a;
   --text_hover: var(--diamond);
 }
 
-:root :has(#gruvbox:checked){
+[data-theme="gruvbox"] {
   --body: #282828;
   --bg_0: #3c3836;
   --text: #fbf1c7;
-  --sep:  #665c54;
+  --sep: #665c54;
   --text_hover: var(--gruv);
 }
 
-:root :has(#gruvbox_light:checked){
+[data-theme="gruvbox_light"] {
   --body: #f9f5d7;
   --bg_0: #ebdbb2;
   --text: #282828;
-  --sep:  #d5c4a1;
+  --sep: #d5c4a1;
   --text_hover: var(--gruv);
 }
 
-:root :has(#rosepine:checked){
+[data-theme="rosepine"] {
   --body: #faf4ed;
   --bg_0: #f2e9e1;
   --text: #575279;
-  --sep:  #e0def4;
+  --sep: #e0def4;
   --text_hover: var(--rose);
 }
 
-:root :has(#biscuit:checked){
+[data-theme="biscuit"] {
   --body: #181515;
   --bg_0: #221E1E;
   --text: #F4E6D2;
-  --sep:  #423939;
+  --sep: #423939;
   --text_hover: var(--rose);
 }
 
-:root :has(#catp_light:checked){
+[data-theme="catp_light"] {
   --body: #dce0e8;
   --bg_0: #e6e9ef;
   --text: #4c4f69;
-  --sep:  #ccd0da;
+  --sep: #ccd0da;
   --text_hover: var(--catp_light);
 }
 
-:root :has(#catp_dark:checked){
+[data-theme="catp_dark"] {
   --body: #11111b;
   --bg_0: #181825;
   --text: #cdd6f4;
-  --sep:  #45475a;
+  --sep: #45475a;
   --text_hover: var(--catp_dark);
 }

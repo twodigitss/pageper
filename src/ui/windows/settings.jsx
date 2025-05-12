@@ -88,7 +88,7 @@ function AppSettings({ isOpen, onClose }){
 
       </form>
 
-      <JsonEditor/>
+      {/* <JsonEditor/> */}
 
     </dialog>
 
