@@ -62,7 +62,8 @@ function AppSettings({ isOpen, onClose }){
         <h3 className="modal_title"> Colorscheme </h3>
 
         <div id="ColorSelectionContainer">
-        <Theme_switcher/>
+          <Theme_switcher/>
+          <h3>WIP: custom </h3>
           <span className="span">
             <input type="color" ref={col_text}/>
             <label htmlFor="favcolor"> Text </label>
