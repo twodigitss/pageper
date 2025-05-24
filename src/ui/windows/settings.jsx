@@ -4,7 +4,8 @@ import { useRef, useEffect } from "react";
 import Load_local_configs from "@utils/load_preferences";
 import Theme_switcher from "@components/theme_picker";
 import {Load_profile_picture} from "@utils/load_preferences";
-import JsonEditor from "@components/jsonEditor";
+import JsonEditor from "@containers/PreferencesEditor";
+import user_pref from "@utils/get_preferences";
 
 //TODO: manejar con un boton el estado de apertura
 //NOTE: si voy a hacer esto, averiguar como reestablecer la config defalult
@@ -27,7 +28,7 @@ function AppSettings({ isOpen, onClose }){
     }
   }, [isOpen]);
 
-  const do_something = (e) => {
+  const do_something = () => {
     const text = col_text.current.value;
     const hover = col_hover.current.value;
     const bg = col_bg.current.value;
@@ -43,6 +44,7 @@ function AppSettings({ isOpen, onClose }){
       sep: sep
     }
 
+    localStorage.setItem('pageper_settings', colors_stored)
     console.log(colors_stored);
     
     onClose();
@@ -51,18 +53,23 @@ function AppSettings({ isOpen, onClose }){
   return(
     <dialog ref={dialogRef} onClose={onClose}>
       <h2 className="modal_title">Settings</h2>
+
       <form className="modal_form" method="dialog" onSubmit={do_something}>
 
+    {/*//load from LS*/} 
+        <input type="text" id="username" ref={col_text} placeholder="Username" value={localStorage.getItem('lol')}/>
         <span id="user">
-          <Load_profile_picture is_pfp={true}/>
-          <input type="text" id="username" ref={col_text} placeholder="Username"/>
+          <Load_profile_picture is_pfp={true} label={"Photo"}/>
+          <Load_local_configs/>
         </span>
-        <Load_local_configs/>
 
-        <h3 className="modal_title"> Colorscheme </h3>
-
-        <div id="ColorSelectionContainer">
+        <span id="trololo">
+          <h3 id="modal_colorscheme"> Colorscheme </h3>
           <Theme_switcher/>
+        </span>
+
+    {/*<div id="ColorSelectionContainer">
+    
           <h3>WIP: custom </h3>
           <span className="span">
             <input type="color" ref={col_text}/>
@@ -74,22 +81,23 @@ function AppSettings({ isOpen, onClose }){
           </span>
           <span className="span">
             <input type="color" ref={col_bg}/>
-            <label htmlFor="favcolor"> Bg </label>
+            <label htmlFor="favcolor"> Body </label>
           </span>
           <span className="span">
             <input type="color" ref={col_bg2}/>
-            <label htmlFor="favcolor"> Bg2 </label>
+            <label htmlFor="favcolor"> Body Overlay </label>
           </span>
           <span className="span">
             <input type="color" ref={col_sep}/>
             <label htmlFor="favcolor"> Separator </label>
           </span>
-        </div>
+
+        </div>*/}
         <button type="submit">Done</button>
 
       </form>
 
-      {/* <JsonEditor/> */}
+    {/*<JsonEditor initialData={user_pref}/>*/} 
 
     </dialog>
 

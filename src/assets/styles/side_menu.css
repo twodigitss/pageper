@@ -54,12 +54,13 @@
   justify-content: center;
   place-items: center;
 
-  width: 12rem; 
+  width: 100%;
 
-  padding: 0rem 1rem 1rem 1rem;
-  border-radius: 1rem ;
+  padding: 0.7rem 0rem 0.7rem 0rem;
+  background-color: var(--body);
 }
 
+.upload_img_button,
 .upload_conf_button{
   all: unset;
 
@@ -72,7 +73,7 @@
   color: var(--text);
   font-size: 1.5rem;
 
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   padding: 1rem 1rem 1rem 1rem;
   cursor: pointer;
   gap: 0.5rem;

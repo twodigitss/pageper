@@ -8,7 +8,7 @@ const Bookmarks = (props) => {
   // const user_pref = user_prefs ? user_prefs : template;
 
   return (
-    <div className={"bookmarks_container"} id={props.has_img}>
+    <div className="bookmarks_container" id={props.has_img}>
       {Object.entries(user_pref.bookmarks).map(([category, links]) => (
         /*so, category serves as the upper title of the category
         while links are the key:value(value is another nest{} and should be

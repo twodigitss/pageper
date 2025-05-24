@@ -195,13 +195,14 @@ body{
   gap: 3rem;
 }
 
-
 input[type="radio"]{
+  margin: unset;
   appearance: none;
   cursor: pointer;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0.5rem;
+  /* border-radius: 50%; */
 }
 input[type="radio"]:checked{
   border: 1px solid var(--text);

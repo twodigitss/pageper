@@ -16,7 +16,7 @@ const Theme_switcher = () => {
 
   return (
     <div className="colorscheme_form">
-      <form >
+    {/*<form >*/} 
         <input type="radio" name='theme' id="light"     
           onChange={save_handler} defaultChecked={saved_theme==='light'}/>
 
@@ -41,7 +41,7 @@ const Theme_switcher = () => {
         <input type="radio" name='theme' id="catp_dark"
           onChange={save_handler} defaultChecked={saved_theme==='catp_dark'}/>
           
-      </form>
+    {/*</form>*/} 
 
     </div>
   )

@@ -33,10 +33,10 @@ const Load_profile_picture = ({is_pfp, label}) => {
       <button 
         // id='enesimo_boton_fondo'
         onClick={triggerFileInput}
-        className="upload_conf_button"
+        className="upload_img_button"
       >
+        <ImageUp size={15}/>
         {label}
-        <ImageUp size={20}/>
       </button>
     </div>
   );
@@ -78,8 +78,8 @@ const Load_local_configs = () => {
       <button onClick={load_file_to_localstorage} className='upload_conf_button'> 
         {/*no funciona con doble link  <span className="material-symbols-outlined"> upload </span>*/}
         
+        <FileUp size={15}/>
         <p>Settings</p>
-        <FileUp size={20}/>
       </button>
 
     </div>

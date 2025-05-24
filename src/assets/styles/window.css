@@ -32,17 +32,20 @@ dialog[open] {
 
 .modal_title{
   margin: unset;
+  margin-bottom: 2rem;
+  color: var(--hover);
+}
+#modal_colorscheme{
+  margin: unset;
+  margin-top: 2rem;
   color: var(--hover);
 }
 
 input[type = color]{
   all: unset;
   border: 0px;
-
-  /* border-radius: 50%; */
   height: 2.5rem;
   width: 2.5rem;
-
 }
 
 .modal_form {
@@ -52,7 +55,7 @@ input[type = color]{
 
 #ColorSelectionContainer {
   display: grid;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .span{
@@ -62,24 +65,35 @@ input[type = color]{
 
 #user{
   display: flex;
+  width: 100%;
   gap: 1rem;
 }
 
-.colorscheme_form{
-  padding: 0px !important;
-  width: fit-content !important;
-  justify-content: left !important;
 
-}
+.upload_img_button,
 .upload_conf_button{
-  padding: 0px !important;
+  padding: 4px !important;
+  background-color: var(--body);
 }
 
 #username{
   all:unset;
   background-color: var(--body);
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 
   padding: 1rem;
 
+}
+
+#trololo{
+  display: grid;
+  gap:1rem;
+  .colorscheme_form{
+    place-self: center;
+  }
+}
+
+.ModalBox{
+  display: flex;
+  flex-direction: row;
 }
