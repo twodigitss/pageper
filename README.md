@@ -5,7 +5,7 @@ This Project was born as a small side project trying to learn how to use ReactJS
 <br><br>
 
 <div style="display:grid; place-items: center;">
-<img src="./public/demo.png" style="border: 3px solid black; border-radius:15px">
+<img src="./public/new_demo.png" style="border: 3px solid black; border-radius:15px">
 </div>
 <br><br>
 
@@ -55,7 +55,6 @@ Once you have <strong>finished</strong> editing your configuration, go to the ex
 For more information, search about JSON Syntax
 
 Thats pretty much everything for now. Enjoy (:
-
     
 <br>
 

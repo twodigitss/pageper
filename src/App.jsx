@@ -23,17 +23,13 @@ const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   
   return (
     <Fragment>
-      {/* <AppSettings on_off={false} /> */}
 
-      {/* El componente de configuración */}
       <AppSettings 
         isOpen={isSettingsOpen} 
         onClose={closeSettings} 
       />
 
       <Main/>
-      {/* Botón para abrir el modal */}
-      {/* <button onClick={openSettings}>Open Settings</button> */}
       <Side_Menu openModal={openSettings}/>
 
       <div className='inverted_corners'>
@@ -42,9 +38,6 @@ const [isSettingsOpen, setIsSettingsOpen] = useState(false);
         <span className='corners_common' id="the_corner3"></span>
       </div>
 
-      {/*its strange, but i use a <a> tag to 
-        display hoverable help text xD*/}
-    
       <a title='Where/How to start? click here!'
         href='https://github.com/twodigitss/pageper'>
         <CircleHelp size={20} id="help" />

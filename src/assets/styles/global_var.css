@@ -1,86 +1,77 @@
 :root {
   /* Colores base - usa oscuro por defecto para evitar el flash */
-  --body: #191919;
-  --bg_0: #1f1f1f;
-  --text: #ececec;
-  --sep: #2a2a2a;
+  --body: hsl(0, 0%, 10%);
+  --bg_0: hsl(0, 0%, 12%);
+  --text: hsl(0, 0%, 93%);
   --text_hover: var(--diamond);
   
   /* Resto de tus variables */
   font-family: "Inter", "Roboto", serif;
   font-size: 42.5%;
   
-  --diamond: #cfe4ef;
-  --day: #ffffcc;
-  --night: #afc0d6;
-  --gruv: #83a598;
-  --rose: #d7827e;
-  --biscuit: #E39C45;
-  --catp_light: #a6d189;
-  --catp_dark: #f4b8e4;
+  --diamond: hsl(201, 50%, 87%);
+  --day: hsl(60, 100%, 90%);
+  --night: hsl(214, 32%, 76%);
+  --gruv: hsl(157, 16%, 58%);
+  --rose: hsl(3, 53%, 67%);
+  --biscuit: hsl(33, 74%, 58%);
+  --catp_light: hsl(96, 44%, 68%);
+  --catp_dark: hsl(316, 73%, 84%);
 }
 
 /* Tema claro (solo se aplica si explícitamente se selecciona) */
 [data-theme="light"] {
-  --body: #ffffff;
-  --bg_0: #f5f5f5;
-  --text: #303030;
-  --sep: #dedede;
+  --body: hsl(0, 0%, 100%);
+  --bg_0: hsl(0, 0%, 96%);
+  --text: hsl(0, 0%, 19%);
   --text_hover: var(--night);
 }
 
 [data-theme="dark"] {
-  --body: #191919;
-  --bg_0: #1f1f1f;
-  --text: #ececec;
-  --sep: #2a2a2a;
+  --body: hsl(0, 0%, 10%);
+  --bg_0: hsl(0, 0%, 12%);
+  --text: hsl(0, 0%, 93%);
   --text_hover: var(--diamond);
 }
 
 [data-theme="gruvbox"] {
-  --body: #282828;
-  --bg_0: #3c3836;
-  --text: #fbf1c7;
-  --sep: #665c54;
+  --body: hsl(30, 9%, 16%);
+  --bg_0: hsl(30, 6%, 22%);
+  --text: hsl(48, 87%, 88%);
   --text_hover: var(--gruv);
 }
 
 [data-theme="gruvbox_light"] {
-  --body: #f9f5d7;
-  --bg_0: #ebdbb2;
-  --text: #282828;
-  --sep: #d5c4a1;
+  --body: hsl(48, 74%, 91%);
+  --bg_0: hsl(48, 56%, 80%);
+  --text: hsl(30, 9%, 16%);
   --text_hover: var(--gruv);
 }
 
 [data-theme="rosepine"] {
-  --body: #faf4ed;
-  --bg_0: #f2e9e1;
-  --text: #575279;
-  --sep: #e0def4;
+  --body: hsl(32, 57%, 95%);
+  --bg_0: hsl(32, 43%, 91%);
+  --text: hsl(249, 22%, 40%);
   --text_hover: var(--rose);
 }
 
 [data-theme="biscuit"] {
-  --body: #181515;
-  --bg_0: #221E1E;
-  --text: #F4E6D2;
-  --sep: #423939;
+  --body: hsl(0, 8%, 9%);
+  --bg_0: hsl(0, 8%, 12%);
+  --text: hsl(33, 74%, 89%);
   --text_hover: var(--rose);
 }
 
 [data-theme="catp_light"] {
-  --body: #dce0e8;
-  --bg_0: #e6e9ef;
-  --text: #4c4f69;
-  --sep: #ccd0da;
+  --body: hsl(220, 23%, 90%);
+  --bg_0: hsl(220, 23%, 93%);
+  --text: hsl(234, 16%, 35%);
   --text_hover: var(--catp_light);
 }
 
 [data-theme="catp_dark"] {
-  --body: #11111b;
-  --bg_0: #181825;
-  --text: #cdd6f4;
-  --sep: #45475a;
+  --body: hsl(240, 21%, 8%);
+  --bg_0: hsl(237, 16%, 13%);
+  --text: hsl(226, 64%, 88%);
   --text_hover: var(--catp_dark);
 }

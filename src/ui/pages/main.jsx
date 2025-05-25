@@ -1,12 +1,6 @@
 import React, { Fragment } from "react";
 import '@styles/index.css';
 
-//i had the idea of replace this line instead the actual (idk what i was thinking)
-//config uloaded with this because if it runs for first time 
-//it gives an error because no user_pref is generated properly
-//before the page loads itself. my apologies
-import user_pref from "@utils/get_preferences";
-
 //ALL COMPONENT IMPORTS
 import Bookmarks from "@containers/bookmarks";
 import CurrentDate, {CurrentTime} from "@components/clock";
@@ -47,7 +41,7 @@ const Main = () => {
 
       <div id="middle_section">
         <h2 id="middle_section_title">Bookmarks</h2>
-        <Bookmarks has_img="bookmark_container_notimg"/>
+        <Bookmarks />
       </div>
 
     </div>

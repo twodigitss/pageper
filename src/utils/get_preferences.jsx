@@ -10,6 +10,7 @@
   *    lmao i forgot this warning existed
  *
  * */
+
 // Retrieve values from localStorage with proper error handling
 const external_conf = localStorage.getItem("pageper_external_conf");
 import defaults_conf from '@template'
@@ -32,7 +33,7 @@ try {
   parsedDefaultsConf = null;
 }
 
-// Si no hay configuración externa, guardar el template como string en localStorage
+// Parse the default config nicely if not external config
 if (!parsedExternalConf && parsedDefaultsConf) {
   const templateAsString = JSON.stringify(parsedDefaultsConf, null, 2);
   localStorage.setItem("pageper_external_conf", templateAsString);

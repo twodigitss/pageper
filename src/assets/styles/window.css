@@ -1,5 +1,5 @@
 :root{
-  --br: 0.4rem;
+  --br: 0.5rem;
 }
 
 dialog::backdrop {
@@ -11,13 +11,13 @@ dialog[open] {
 }
 
 dialog {
-  /* NOTE: here i had a display grid commented...*/
+  /* NOTE: here i had a display grid commented here...*/
   padding: 3rem;
   gap: 1rem;
 
   background-color: var(--bg_0);
   color: var(--text);
-  border: 1px solid var(--text_hover);
+  border: 0px solid var(--text_hover);
   border-radius: var(--br);
 
   z-index: 1000;
@@ -78,12 +78,53 @@ dialog {
   gap:1rem;
 
   .colorscheme_form{
+    display: flex;
+    width: 100%;
     place-self: center;
-    border-radius: var(--br);
-  }
+    place-items: center;
+    justify-content: center;
 
+    background-color: var(--body);
+    padding: 0.7rem 0rem 0.7rem 0rem;
+    border-radius: var(--br);  
+  }
 }
 
+input[type="radio"]{
+  margin: unset;
+  appearance: none;
+  cursor: pointer;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin: 0.5rem;
+}
+input[type="radio"]:checked{
+  border: 1px solid var(--text);
+}
+input[type="radio"]#dark{
+  background-color: var(--night);
+}
+input[type="radio"]#light{
+  background-color: var(--day);
+}
+input[type="radio"]#gruvbox{
+  background-color: var(--gruv);
+}
+input[type="radio"]#gruvbox_light{
+  background-color: var(--gruv);
+}
+input[type="radio"]#rosepine{
+  background-color: var(--rose);
+}
+input[type="radio"]#biscuit{
+  background-color: var(--biscuit);
+}
+input[type="radio"]#catp_light{
+  background-color: var(--catp_light);
+}
+input[type="radio"]#catp_dark{
+  background-color: var(--catp_dark);
+}
 #modal_colorscheme{
   margin: unset;
   margin-top: 2rem;
@@ -160,7 +201,6 @@ dialog {
 #modal_btn_submit{
   all: unset;
   margin-top: 2rem;
-  /* width: 100%; */
   width: calc(100% - 3rem);
 
   padding: 1.5rem;

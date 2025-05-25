@@ -2,10 +2,6 @@ import React from "react";
 //import user_pref from '../../../user_conf.json';
 
 const Theme_switcher = () => {
-  
-  // get local saved theme
-  // either if is not found it will take light as default
-  // who knows why...
   const saved_theme = localStorage.getItem("pageper_theme") || 'light' ;
   
   const save_handler = (e) => {

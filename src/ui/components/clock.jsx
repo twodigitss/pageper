@@ -13,11 +13,6 @@ function CurrentDate() {
   }, []);
 
   function getFormattedDate(dateObj) {
-    // const days = [
-    //   'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
-    // ];
-    // const _dayName = days[date.getDay()];
-
     const months = [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
@@ -36,7 +31,6 @@ function CurrentDate() {
 }
 
 const CurrentTime = () => {
-//   const [time, setTime] = useState(new Date().toLocaleTimeString());
   const [time, setTime] = useState(new Date().toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
