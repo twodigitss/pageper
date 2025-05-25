@@ -147,16 +147,6 @@ body{
   flex-direction: row;
   justify-content:space-between;
 
-  /*why...?*/
-  /* height: content-fit; */
-  /* height: auto; */
-  /* max-width: 70rem; */
-
-  /* background-color: var(--bg_0);  */
-  /* border: 0px; */
-  /* border-left: 3px; */
-  /* border-color: var(--text); */
-  /* border-style: solid; */
   padding: 1rem 2rem 1rem 2rem;
   
   .bookmarks_title{
@@ -199,10 +189,9 @@ input[type="radio"]{
   margin: unset;
   appearance: none;
   cursor: pointer;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.9rem;
+  height: 1.9rem;
   margin: 0.5rem;
-  /* border-radius: 50%; */
 }
 input[type="radio"]:checked{
   border: 1px solid var(--text);

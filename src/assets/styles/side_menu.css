@@ -8,13 +8,8 @@
 #Banner{
   margin-bottom: 1rem;
 }
-#side_menu_separator{
-  content:'';
-  width: 100%;
-  height: 0.1rem;
-  margin-bottom: 1rem;
-  background-color: var(--sep);
-}
+
+
 .side_menu_configs{
   display: flex;
   flex-direction: column;

@@ -18,28 +18,28 @@ const Theme_switcher = () => {
     <div className="colorscheme_form">
     {/*<form >*/} 
         <input type="radio" name='theme' id="light"     
-          onChange={save_handler} defaultChecked={saved_theme==='light'}/>
+          onChange={save_handler} className="default_form_themes" defaultChecked={saved_theme==='light'}/>
 
         <input type="radio" name='theme' id="dark"      
-          onChange={save_handler} defaultChecked={saved_theme==='dark'}/>
+          onChange={save_handler} className="default_form_themes" defaultChecked={saved_theme==='dark'}/>
 
         <input type="radio" name='theme' id="rosepine"  
-          onChange={save_handler} defaultChecked={saved_theme==="rosepine"}/>
+          onChange={save_handler} className="default_form_themes" defaultChecked={saved_theme==="rosepine"}/>
 
         <input type="radio" name='theme' id="biscuit"   
-          onChange={save_handler} defaultChecked={saved_theme==='biscuit'}/> 
+          onChange={save_handler} className="default_form_themes" defaultChecked={saved_theme==='biscuit'}/> 
 
         <input type="radio" name='theme' id="gruvbox_light"   
-          onChange={save_handler} defaultChecked={saved_theme==='gruvbox_light'}/>
+          onChange={save_handler} className="default_form_themes" defaultChecked={saved_theme==='gruvbox_light'}/>
         
         <input type="radio" name='theme' id="gruvbox"   
-          onChange={save_handler} defaultChecked={saved_theme==='gruvbox'}/>
+          onChange={save_handler} className="default_form_themes" defaultChecked={saved_theme==='gruvbox'}/>
         
         <input type="radio" name='theme' id="catp_light"
-          onChange={save_handler} defaultChecked={saved_theme==='catp_light'}/>
+          onChange={save_handler} className="default_form_themes" defaultChecked={saved_theme==='catp_light'}/>
 
         <input type="radio" name='theme' id="catp_dark"
-          onChange={save_handler} defaultChecked={saved_theme==='catp_dark'}/>
+          onChange={save_handler} className="default_form_themes" defaultChecked={saved_theme==='catp_dark'}/>
           
     {/*</form>*/} 
 

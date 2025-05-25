@@ -1,10 +1,10 @@
 import { useRef, useState, useEffect } from 'react';
-import { ImageUp, FileUp } from 'lucide-react';
+import { Camera, FileJson2 } from 'lucide-react';
 import '@styles/side_menu.css'
 
 const Load_profile_picture = ({is_pfp, label}) => {
   const fileInputRef = useRef(null);
-  const set_img_to_ls = is_pfp ? 'pageper_profile_img' : 'pageper_banner_img';
+  const set_img_to_ls = 'pageper_profile_img';
 
   const handleImageSelect = (event) => {
     const file = event.target.files[0];
@@ -30,12 +30,8 @@ const Load_profile_picture = ({is_pfp, label}) => {
         accept="image/*"
         onChange={handleImageSelect}
       />
-      <button 
-        // id='enesimo_boton_fondo'
-        onClick={triggerFileInput}
-        className="upload_img_button"
-      >
-        <ImageUp size={15}/>
+      <button onClick={triggerFileInput} className="upload_img_button">
+        <Camera size={15}/>
         {label}
       </button>
     </div>
@@ -43,7 +39,7 @@ const Load_profile_picture = ({is_pfp, label}) => {
 }
 
 
-const Load_local_configs = () => {
+const Load_local_configs = ({label}) => {
   const external_json = useRef(null)
 
   //click handler for button
@@ -64,7 +60,9 @@ const Load_local_configs = () => {
           console.error("Error loading configuration:", error);}};
         
       fileReader.readAsText(file);  
-      window.location.reload();});  }
+      window.location.reload();
+    });  
+  }
 
   return(
     <div className='load_config_container'>
@@ -76,10 +74,8 @@ const Load_local_configs = () => {
       />
 
       <button onClick={load_file_to_localstorage} className='upload_conf_button'> 
-        {/*no funciona con doble link  <span className="material-symbols-outlined"> upload </span>*/}
-        
-        <FileUp size={15}/>
-        <p>Settings</p>
+        <FileJson2 size={15}/>
+        <p>{label}</p>
       </button>
 
     </div>

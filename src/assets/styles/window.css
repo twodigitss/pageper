@@ -1,18 +1,24 @@
-dialog {
-  /* display: grid; */
+:root{
+  --br: 0.4rem;
+}
 
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.50);
+}
+
+dialog[open] {
+  display: block;
+}
+
+dialog {
+  /* NOTE: here i had a display grid commented...*/
   padding: 3rem;
   gap: 1rem;
 
   background-color: var(--bg_0);
   color: var(--text);
   border: 1px solid var(--text_hover);
-  border-radius: 0.0rem;
-
-  /* position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  border-radius: var(--br);
 
   z-index: 1000;
 
@@ -21,13 +27,15 @@ dialog {
   overflow-y: auto;
 }
 
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.50);
+.modal_form {
+  display: flex;
+  gap: 2rem;
+  height: 60rem;
 }
 
-/* Asegúrate de que cuando el dialog está abierto, nada más se pueda interactuar */
-dialog[open] {
-  display: block;
+#MODAL_LEFT{
+  display: grid;
+  align-content: start;
 }
 
 .modal_title{
@@ -35,32 +43,20 @@ dialog[open] {
   margin-bottom: 2rem;
   color: var(--hover);
 }
-#modal_colorscheme{
-  margin: unset;
-  margin-top: 2rem;
-  color: var(--hover);
-}
 
-input[type = color]{
-  all: unset;
-  border: 0px;
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-#ColorSelectionContainer {
+#settings_side_up{
   display: grid;
-  background-color: var(--body);
-  padding: 1.5rem;
-  /* gap: 1rem; */
-}
-#custom_colorscheme{
-  margin: unset;
+  gap: 1rem;
 }
 
-.span{
-  gap: 1rem;
-  display: flex;
+#username{
+  all:unset;
+  background-color: var(--body);
+
+  border-radius: var(--br);
+
+  padding: 1rem;
+
 }
 
 #user{
@@ -69,63 +65,108 @@ input[type = color]{
   gap: 1rem;
 }
 
-
 .upload_img_button,
 .upload_conf_button{
+  font-size: 1.8rem;
   padding: 4px !important;
   background-color: var(--body);
-}
-
-#username{
-  all:unset;
-  background-color: var(--body);
-  /* border-radius: 0.5rem; */
-
-  padding: 1rem;
-
+  border-radius: var(--br);
 }
 
 #trololo{
   display: grid;
   gap:1rem;
+
   .colorscheme_form{
     place-self: center;
+    border-radius: var(--br);
   }
+
 }
 
-.modal_form {
-  display: flex;
-  gap: 2rem;
+#modal_colorscheme{
+  margin: unset;
+  margin-top: 2rem;
+  color: var(--hover);
 }
 
-#MODAL_LEFT{
+#custom_colorscheme{
+  margin: unset;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#ColorSelectionContainer {
   display: grid;
+  background-color: var(--body);
+  padding: 1.5rem;
+  border-radius: var(--br);
+  gap: 1.5rem;
+  height: calc(100% + (4.9rem * 2));
+  align-content: start;
+}
+
+.span{
   gap: 1rem;
+  display: flex;
+  place-items:center;
+}
+
+.custom_colors_input{
+  all: unset;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+
+  height: 1.9rem;
+  width: 1.9rem;
+  border-radius: var(--br);
+  
+  /*only if necesary*/
+  background-color: transparent;
+}
+
+.custom_colors_input::-moz-color-swatch {
+  border: none;
+  border-radius: var(--br);
+}
+
+.default_form_themes{
+  border-radius: var(--br) !important;
 }
 
 #MODAL_RIGHT{
   gap: 1rem;
+  width: 100rem;
+
   textarea{
     all: unset;
+
+    height: calc(100% - 4.8rem * 2);
+    width: calc(100% - 2rem * 2);
+
     display: block;
     white-space: pre-wrap;
     line-height: 1.4;
     resize: none;
 
     background-color: var(--body);
+    border-radius: var(--br);
     color: var(--text);
-    height: 80%;
+    padding: 2rem;
   }
 }
 
 #modal_btn_submit{
   all: unset;
   margin-top: 2rem;
-  width: 95%;
+  /* width: 100%; */
+  width: calc(100% - 3rem);
 
   padding: 1.5rem;
   background-color: var(--body);
   color: var(--text);
   cursor: pointer;
   text-align: center;
+  border-radius: var(--br);
 }

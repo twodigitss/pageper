@@ -6,8 +6,10 @@
  *    ON THIS FILE STRICTLY, NO OTHER RETRIEVING LOGIC SHOULD BE
  *    MANAGED OUT OF THIS FILE FOR CLEANESS AND MAINTAINABILITY
  *    PURPOSES 
+  *
+  *    lmao i forgot this warning existed
  *
-  * */
+ * */
 // Retrieve values from localStorage with proper error handling
 const external_conf = localStorage.getItem("pageper_external_conf");
 import defaults_conf from '@template'
@@ -24,10 +26,17 @@ try {
 }
 
 try {
-  parsedDefaultsConf = defaults_conf ? defaults_conf : null;
+  parsedDefaultsConf = defaults_conf ? JSON.parse(JSON.stringify(defaults_conf))  : null;
 } catch (e) {
   console.error("Failed to parse defaults_conf:", e);
   parsedDefaultsConf = null;
+}
+
+// Si no hay configuración externa, guardar el template como string en localStorage
+if (!parsedExternalConf && parsedDefaultsConf) {
+  const templateAsString = JSON.stringify(parsedDefaultsConf, null, 2);
+  localStorage.setItem("pageper_external_conf", templateAsString);
+  console.log("Template configuration saved to localStorage");
 }
 
 // Now use the parsed objects (or fallback) safely
