@@ -82,7 +82,7 @@ body{
 
   #profile_picture{
     --size: 5.5rem;
-    border-radius:50%;
+    border-radius:25%;
     width: var(--size);
     height: var(--size);
   }

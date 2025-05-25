@@ -48,14 +48,14 @@ input[type = color]{
   width: 2.5rem;
 }
 
-.modal_form {
-  display: grid;
-  gap: 1rem;
-}
-
 #ColorSelectionContainer {
   display: grid;
+  background-color: var(--body);
+  padding: 1.5rem;
   /* gap: 1rem; */
+}
+#custom_colorscheme{
+  margin: unset;
 }
 
 .span{
@@ -93,7 +93,39 @@ input[type = color]{
   }
 }
 
-.ModalBox{
+.modal_form {
   display: flex;
-  flex-direction: row;
+  gap: 2rem;
+}
+
+#MODAL_LEFT{
+  display: grid;
+  gap: 1rem;
+}
+
+#MODAL_RIGHT{
+  gap: 1rem;
+  textarea{
+    all: unset;
+    display: block;
+    white-space: pre-wrap;
+    line-height: 1.4;
+    resize: none;
+
+    background-color: var(--body);
+    color: var(--text);
+    height: 80%;
+  }
+}
+
+#modal_btn_submit{
+  all: unset;
+  margin-top: 2rem;
+  width: 95%;
+
+  padding: 1.5rem;
+  background-color: var(--body);
+  color: var(--text);
+  cursor: pointer;
+  text-align: center;
 }

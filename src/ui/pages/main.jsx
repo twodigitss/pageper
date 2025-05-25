@@ -9,7 +9,6 @@ import user_pref from "@utils/get_preferences";
 
 //ALL COMPONENT IMPORTS
 import Bookmarks from "@containers/bookmarks";
-import MinimalSearchBar from "@components/search_bar";
 import CurrentDate, {CurrentTime} from "@components/clock";
 import useLocalS from "@hooks/useLocalSt";
 
@@ -19,12 +18,8 @@ function truncateText(text, maxLength) {
 }
 
 const Main = () => {
-  //custom hooks to update images
-  //takes a key and a default value
   const profile_pic = useLocalS('pageper_profile_img', './images/user.png');
-  const banner_pic = useLocalS('pageper_banner_img', './images/pageper_promo.jpg');
-
-  const username = user_pref.username 
+  const username = localStorage.getItem('pageper_username') || "Default"
   const username_cropped = truncateText(username, 20);
 
   return(
@@ -48,24 +43,11 @@ const Main = () => {
           <CurrentDate/>
         </div>
          
-        {/*<MinimalSearchBar/> */} 
       </div>
 
       <div id="middle_section">
         <h2 id="middle_section_title">Bookmarks</h2>
         <Bookmarks has_img="bookmark_container_notimg"/>
-        {/* banner_pic ? 
-            //render bookmark here as bookmark_container_hasimg 
-            ( <Fragment>
-                <img id='gif' src={banner_pic}></img> 
-                <Bookmarks has_img="bookmark_container_hasimg"/>
-              </Fragment>
-            )
-            : //render bookmark here as bookmark_container_notimg 
-            ( <Fragment>
-              </Fragment>
-            )
-        */} 
       </div>
 
     </div>
