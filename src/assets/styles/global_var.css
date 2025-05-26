@@ -6,7 +6,7 @@
   --text_hover: var(--diamond);
   
   /* Resto de tus variables */
-  font-family: "Inter", "Roboto", serif;
+  font-family: "Inter", "Arial", serif;
   font-size: 42.5%;
   
   --diamond: hsl(201, 50%, 87%);
