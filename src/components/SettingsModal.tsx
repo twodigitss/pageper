@@ -48,8 +48,9 @@ function AppSettings({ isOpen, onClose }: AppSettingsProps){
     onClose();
   }
 
+  // <dialog ref={dialogRef} onClose={onClose} className="flex p-12 gap-4 bg-bg-0 text-text rounded-lg max-w-[80%] max-h-[80vh] overflow-y-auto z-1000 backdrop:bg-black/50 open:block ">
   return(
-    <dialog ref={dialogRef} onClose={onClose} className="p-12 gap-4 bg-bg-0 text-text rounded-lg max-w-[80%] max-h-[80vh] overflow-y-auto z-1000 backdrop:bg-black/50 open:block">
+    <dialog ref={dialogRef} onClose={onClose} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-12 gap-4 bg-bg-0 text-text rounded-lg max-w-[80%] max-h-[80vh] overflow-y-auto z-1000 backdrop:bg-black/50 open:block ">
 
       <form className="flex gap-8 h-240" method="dialog" onSubmit={do_something}>
         <div className="grid align-content-start">
@@ -99,6 +100,7 @@ function AppSettings({ isOpen, onClose }: AppSettingsProps){
         </div>
 
       </form>
+
 
       <button className="all-unset mt-8 w-[calc(100%-3rem)] p-6 bg-body text-text cursor-pointer text-center rounded-lg" onClick={do_something}>Done</button>
 

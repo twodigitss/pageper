@@ -26,7 +26,7 @@ function CurrentDate() {
   }
 
   return (
-    <p className="font-bold">{date}</p>
+    <p className="text-3xl font-semibold">{date}</p>
   );
 }
 
@@ -51,7 +51,7 @@ const CurrentTime = () => {
   }, []);
 
   return (
-    <p className="text-lg font-bold"><strong>{time}</strong></p>
+    <p className="text-2xl font-light text-text-hover"><strong>{time}</strong></p>
   );
 
 };
