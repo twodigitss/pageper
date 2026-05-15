@@ -9,15 +9,15 @@ This Project was born as a small side project trying to learn how to use ReactJS
 </div>
 <br><br>
 
-## <strong> 🖥️ How to install?</strong>
+## <strong> How to install?</strong>
 
-### 🧩 Through Firefox Extensions. <br>
+### Through Firefox Extensions. <br>
 <strong>This is the recommended way</strong> of installation.<br>
 Pageper is <strong>now available</strong> at Firefox Addons Store. check it out! (:   
 * https://addons.mozilla.org/en-US/firefox/addon/pageper/
 <br><br>
 
-### 📦 From source with node package manager (npm).<br>
+### From source with node package manager (npm).<br>
 I made a Markdown file for building from source.<br>
 * [Building instructions from source and requisites](/BuildFromSource.md)
 
@@ -27,7 +27,7 @@ Or you can run the auto-build script that atomate this whole process.<br>
     
 <br>
 
-## 🚀 <strong>Get started! </strong>
+## <strong>Get started! </strong>
 
 This Startpage is <strong>managed</strong> through a <strong>`JSON` file</strong> that contains configuration you set on it, like your username and bookmarks. <br>
 
@@ -38,7 +38,7 @@ You can copy the file and locate it wherever you feel like/
 
 <strong>You can set</strong> your username 👤 in the "username" default value <i>(obviously dont replace the "username" key, do replace the "Default" text)</i>. <br>
 
-<strong>To add bookmarks 📔</strong> (or modify them), you edit values on the json file, is as easy as opening a new set of values <strong>inside</strong> the `bookmark` category. The code should look like this:<br>
+<strong>To add bookmarks </strong> (or modify them), you edit values on the json file, is as easy as opening a new set of values <strong>inside</strong> the `bookmark` category. The code should look like this:<br>
 ```json
     "username": "your_name_here",
     "bookmarks" : {
@@ -58,7 +58,7 @@ Thats pretty much everything for now. Enjoy (:
     
 <br>
 
-## <strong>⚠️ Got a error? </strong>
+## <strong> Got a error? </strong>
 Open a issue or discution in this repository (:<br>
 If its possible, add the output log of the console from `Inspect(Q) -> Console`.<br> 
 I am as active as i can.
