@@ -1,8 +1,8 @@
 import { Fragment, useState } from 'react'
-import user_pref from '@template'
-import Main from '@pages/main';
-import Side_Menu from "@pages/side_menu";
-import AppSettings from "@ui/windows/settings";
+import user_pref from '@services/preferences'
+import Home from '@pages/Home';
+import Side_Menu from "@components/SideMenu";
+import AppSettings from "@components/SettingsModal";
 import { CircleHelp } from 'lucide-react';
 import '@styles/index.css'
 
@@ -29,18 +29,17 @@ const [isSettingsOpen, setIsSettingsOpen] = useState(false);
         onClose={closeSettings} 
       />
 
-      <Main/>
+      <Home/>
       <Side_Menu openModal={openSettings}/>
 
-      <div className='inverted_corners'>
-        <span className='corners_common' id="the_corner1"></span>
-        <span className='corners_common' id="the_corner2"></span>
-        <span className='corners_common' id="the_corner3"></span>
+      <div className='fixed bottom-0 left-0 flex items-end pointer-events-none'>
+        {/* Simplified inverted corners or keep them if needed, but let's try to use Tailwind for the help icon first */}
       </div>
 
       <a title='Where/How to start? click here!'
-        href='https://github.com/twodigitss/pageper'>
-        <CircleHelp size={20} id="help" />
+        href='https://github.com/twodigitss/pageper'
+        className="fixed bottom-0 -left-px p-4 text-text bg-bg-0 rounded-tr-2xl z-50">
+        <CircleHelp size={20} />
       </a>
 
     </Fragment>

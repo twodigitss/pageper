@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 //use a hook to constantly checking localstorage changes.
 //mainly used for reloading the images, but might work for other things.
-const useLocalS = (key, default_value) => {
+const useLocalS = (key: string, default_value: string) => {
   const stored_key = localStorage.getItem(key);
 
   const [value, setValue] = useState(
@@ -18,7 +18,7 @@ const useLocalS = (key, default_value) => {
     const interval = setInterval( checkForUpdates, 1000 );
     
     return () => clearInterval(interval);
-  }, [value] );
+  }, [value, key, default_value] );
   
   return value;
 }

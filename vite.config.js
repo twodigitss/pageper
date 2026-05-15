@@ -1,33 +1,25 @@
-import path from "path";
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: './', // Ensure relative paths include './'
-  plugins: [react()],
+  base: './',
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
   build: {
     assetsDir: './assets'
   },
   resolve: {
-      alias: {
-      // "@": path.resolve(__dirname, "./src/*"),
-      
-      //misc
-      '@styles':'/src/assets/styles',
-
-      //Components
-      '@ui':'/src/ui',
-
-      '@components': '/src/ui/components',
-      '@containers': '/src/ui/containers',
-      '@pages': '/src/ui/pages',
-      '@utils': '/src/utils',
+    alias: {
+      '@styles': '/src/assets/styles',
+      '@components': '/src/components',
+      '@pages': '/src/pages',
+      '@services': '/src/services',
       '@hooks': '/src/hooks',
-
-      //configurations
-      '@user_conf': '/src/utils/get_preferences',
-      '@template': '/src/config/template',
+      '@type': '/src/types',
+      '@template': '/src/config/template.json',
     },
   },
 })

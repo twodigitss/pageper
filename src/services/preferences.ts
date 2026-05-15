@@ -1,3 +1,6 @@
+import defaults_conf from '@template'
+import { AppConfig } from '@type/config';
+
 /*    PERSONAL REMINDER TO MANAGE THE LOGIC OF RETRIEVING
  *    THE USER PREFERENCES FROM A OUTER SOURCE AND ITS FALLBACK 
  *    TO THE DEFAULT CONFIGURATION THROUGHT THE JSON STORED IN
@@ -13,11 +16,10 @@
 
 // Retrieve values from localStorage with proper error handling
 const external_conf = localStorage.getItem("pageper_external_conf");
-import defaults_conf from '@template'
 
 // First parse the JSON strings if they exist
-let parsedExternalConf;
-let parsedDefaultsConf;
+let parsedExternalConf: AppConfig | null;
+let parsedDefaultsConf: AppConfig | null;
 
 try {
   parsedExternalConf = external_conf ? JSON.parse(external_conf) : null;
@@ -41,6 +43,6 @@ if (!parsedExternalConf && parsedDefaultsConf) {
 }
 
 // Now use the parsed objects (or fallback) safely
-const user_pref = parsedExternalConf || parsedDefaultsConf || {}; // Use empty object as final fallback
+const user_pref: AppConfig = parsedExternalConf || parsedDefaultsConf || { bookmarks: {} }; // Use empty object as final fallback
 
 export default user_pref;
