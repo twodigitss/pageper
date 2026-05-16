@@ -6,4 +6,5 @@ export interface AppConfig {
   bookmarks: {
     [category: string]: BookmarkCategory;
   };
+  showFavicons?: boolean;
 }
