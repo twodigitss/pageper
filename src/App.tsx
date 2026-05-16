@@ -28,6 +28,7 @@ const [isSettingsOpen, setIsSettingsOpen] = useState(false);
         onClose={closeSettings} 
       />
 
+
       <Home/>
       <Side_Menu openModal={openSettings}/>
 

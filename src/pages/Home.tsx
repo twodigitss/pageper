@@ -17,7 +17,7 @@ const Home = () => {
 
       <div className="flex content-center justify-start gap-8">
 
-        <div className="flex flex-col gap-2 my-4 max-[700px]:grid-flow-row max-[700px]:justify-items-center">
+        <div className="flex flex-col gap-3 my-4 max-[700px]:grid-flow-row max-[700px]:justify-items-center">
             <CurrentDate/>
             <CurrentTime/>
         </div>

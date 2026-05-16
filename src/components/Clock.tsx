@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Calendar } from 'lucide-react';
 
 function CurrentDate() {
   const [date, setDate] = useState(getFormattedDate(new Date()));
@@ -26,7 +27,10 @@ function CurrentDate() {
   }
 
   return (
-    <p className="text-3xl font-semibold">{date}</p>
+    <p className=" flex items-center justify-center gap-4 text-3xl font-semibold">
+      <Calendar size={32} className="text-text"/>
+      {date}
+    </p>
   );
 }
 
@@ -51,7 +55,9 @@ const CurrentTime = () => {
   }, []);
 
   return (
-    <p className="text-2xl font-light text-text-hover"><strong>{time}</strong></p>
+    <p className=" flex gap-4 text-3xl font-light text-text-hover">
+      <strong>{time} </strong>
+    </p>
   );
 
 };
